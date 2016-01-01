@@ -1,0 +1,51 @@
+
+<div class="atk-section">
+  <div class="atk-swatch-green-vizi atk-padding-small">{type}:: {address}</div>
+  <div class="atk-swatch-light-gray-vizi atk-padding-small">
+    <p>Model: <u>{model}</u></p>
+    <P>Responding: <span class="atk-effect-success">Yes </span>/&nbsp;<span class="atk-effect-danger">No</span></P>
+    <div class="atk-row">
+      <div class="atk-col-6">
+        <P>Working Status:</P>
+      </div>
+      <div class="atk-col-6">
+        <div class="onoffswitch">
+          <input type="checkbox" checkbox="" id="{working_status_id}" name="onoffswitch" class="onoffswitch-checkbox"/>
+          <label for="{working_status_id_label}" class="onoffswitch-label">
+            <div class="onoffswitch-inner"></div><span class="onoffswitch-switch"></span>
+          </label>
+        </div>
+      </div>
+    </div>
+    <div class="atk-row">
+      <div class="atk-col-6">
+        <P>Brightness level: <span class="mapeditor-device-brightness-value">{brightness_level} %</span></P>
+      </div>
+      <div class="atk-col-6">
+        <div brightness_level="{brightness_level}" class="mapeditor-device-info-brightness"></div>
+      </div>
+    </div>
+    <P surge_protector_condition="{surge_protector_condition}">Surge Protector Condition <span class="atk-effect-danger">OFF </span>/&nbsp;<span class="atk-effect-success">On </span>/&nbsp;<span class="atk-effect-success">No monitoring</span></P>
+  </div>
+  <div class="atk-swatch-gray-vizi atk-padding-small text-capitalize">Metering Data</div>
+  <div class="atk-swatch-light-gray-vizi atk-padding-small">
+    <P>Power: {power}</P>
+    <P>Voltage: {voltage}</P>
+    <p>Current: {current}</p>
+    <P>Consumption: {consumption}</P>
+    <p>PF: {pf}</p>
+    <P>T LED: {t_led}</P>
+    <P>T LC: {t_lc}</P>
+    <P>CLO: <u>{clo}</u></P>
+    <P>Actual working time: {actual_working_time} <span class="mapeditor-device-info-working-time"></span></P>
+  </div>
+  <div class="atk-swatch-gray-vizi atk-padding-small text-capitalize">Information</div>
+  <div class="atk-swatch-light-gray-vizi atk-padding-small">
+    <p>Location GPS: {latitude}, {longitude}</p>
+    <P>Group: {group}</P>
+    <P>LC Model: {lc_model}</P>
+    <P>LC Firmware: {lc_firmware}</P>
+    <P>Terminal address: {terminal_address}</P>
+    <P>Global address: {global_address}</P>
+  </div>
+</div>

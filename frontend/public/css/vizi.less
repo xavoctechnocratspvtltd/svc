@@ -1,0 +1,43 @@
+@import '../../../agiletoolkit-css/framework/less/agiletoolkit.less';
+
+
+@atk-swatch-white:     #ffffff;     .createSwatch(atk-swatch-white);
+@atk-swatch-gray:      #cbc7c7;     .createSwatch(atk-swatch-gray);
+@atk-swatch-lightgray: #edeff1;     .createSwatch(atk-swatch-lightgray);
+@atk-swatch-ink:       #363839;     .createSwatch(atk-swatch-ink);
+@atk-swatch-yellow:    #BFAB25;     .createSwatch(atk-swatch-yellow);
+@atk-swatch-red:       #f5241a;     .createSwatch(atk-swatch-red);
+@atk-swatch-green:     #2b865a;     .createSwatch(atk-swatch-green);
+@atk-swatch-blue:      #0D3B66;     .createSwatch(atk-swatch-blue);
+@atk-swatch-lightRed:  #fff4f2;     .createSwatch(atk-swatch-lightRed, @swatchTextColor: @atk-swatch-red);
+
+.createViewport(
+    @wrapperMargin:    2rem,
+    @colsGutter:       2rem,
+    @cols:             12,
+    @viewportMinWidth: 54rem + 12rem + 4rem,
+    @wrapperMinWidth:  54rem,
+    @wrapperMaxWidth:  54rem
+);
+.createViewport(
+    @wrapperMargin:    2rem,
+    @colsGutter:       2rem,
+    @cols:             12,
+    @viewportMinWidth: 0px,
+    @viewportMaxWidth: 54rem + 12rem + 4rem,
+    @wrapperMinWidth:  40rem,
+    @wrapperMaxWidth:  40rem,
+    @customStyle: {
+        #sidebar {
+            display: none;
+        }
+    }
+);
+
+
+.vizi-login-layout{
+    background: url('../images/background.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}

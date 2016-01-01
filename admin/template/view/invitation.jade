@@ -1,0 +1,21 @@
+.atk-table.atk-table-zebra.atk-table-bordered(id="{$_name}" class="{$class}")
+    table
+      thead
+        tr
+          th
+            | S. No.
+          th Code
+          th Invitation Link
+          th Actions
+      tbody
+        {rows}{row}
+        tr(data-id='{$id}' class=" {$blocked} ")
+          td
+            | {$id}
+          td.atk-text-nowrap {$name}
+          td.atk-jackscrew.atk-text-dimmed
+            {$invitation_url}
+          td.atk-align-center.block-invitation
+            a Block
+        {/}{/}
+

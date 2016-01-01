@@ -1,0 +1,125 @@
+#map{
+	min-height: 500px;
+	width:100%;
+}
+
+.mapeditor {
+	position:relative !important;
+}
+
+#map-editor-tool-panel {
+  border: 1px solid #999;
+  background-color: #fff;
+  z-index: 5;
+  padding: 5px;
+  text-align: center;
+}
+
+#map-editor-tool-panel input[type="button"]{
+  padding: 5px;
+  margin-top:5px; 
+}
+
+#component-info-panel{
+ /* top:50px;
+  z-index: 5;
+  background: #fff;
+  padding: 5px;
+  border: 1px solid #999;
+  position: absolute;
+  right: 1%;
+  width:200px;*/
+}
+
+.xmapeditor-container{
+  position: relative !important;
+}
+
+.map-editor-info-container{
+  width: 400px;
+  position: absolute;
+  top:0;
+  margin-top: 40px;
+
+}
+
+.atk-swatch-green-vizi{
+  background-color: #009866;
+  color:white;
+  font-weight: 500;
+}
+
+.atk-swatch-gray-vizi{
+  background-color: #CBC7C7;
+}
+
+.atk-swatch-light-gray-vizi{
+background-color: #E3E3E3;
+}
+
+.atk-swatch-light-gray-vizi > p{
+  margin:0; 
+}
+
+.text-capitalize{
+  text-transform: capitalize;
+}
+
+.onoffswitch {
+  position: relative; width: 65px;
+  -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+}
+.onoffswitch-checkbox {
+  display: none;
+}
+.onoffswitch-label {
+  display: block; overflow: hidden; cursor: pointer;
+  border: 2px solid #999999; border-radius: 14px;
+}
+.onoffswitch-inner {
+  display: block; width: 200%; margin-left: -100%;
+  transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+  display: block; float: left; width: 50%; height: 20px; padding: 0; line-height: 20px;
+  font-size: 13px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+  box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+  content: "ON";
+  padding-left: 10px;
+  background-color: #00994D; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+  content: "OFF";
+  padding-right: 10px;
+  background-color: #FF2D1A; color: #FFFFFF;
+  text-align: right;
+}
+.onoffswitch-switch {
+  display: block; width: 16px; margin: 2px;
+  background: #FFFFFF;
+  position: absolute; top: 0; bottom: 0;
+  right: 41px;
+  border: 2px solid #999999; border-radius: 14px;
+  transition: all 0.3s ease-in 0s;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+  margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+  right: 0px;
+}
+
+#lamp-editor {
+  height:400px;
+  overflow-y:scroll; 
+}
+
+#lamp-editor .atk-section{
+  padding-top:0px;
+}
+
+.mapeditor-device-info-brightness{
+  margin-top: 5px;
+}

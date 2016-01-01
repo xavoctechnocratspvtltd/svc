@@ -1,0 +1,7 @@
+{subject}Trial Account Created Successfully {/}
+
+<h2>Your Trial Account Created Successfully</h2>
+
+<p>To Verifiy Your Registered email id must click on the following link</p>
+
+<a href="{$link}">{$link}</a>

@@ -1,0 +1,86 @@
+doctype html
+<!--[if lt IE 7]<html lang="en" class="no-js oldie lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if IE 7]><html lang="en" class="no-js oldie lt-ie9 lt-ie8"><![endif]-->
+<!--[if IE 8]><html lang="en" class="no-js oldie lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!-->
+html(class='no-js')
+  <!--<![endif]-->
+  include includes/head
+  body
+    include includes/browsehappy
+    .atk-layout
+      include includes/header
+      .atk-layout-row.atk-layout-expand
+          .atk-layout.atk-layout-cell#atk-layout-content
+              .atk-layout-column.atk-layout-expand
+                .atk-wrapper.atk-section-large
+                  h2 Layout Templates
+                  p
+                    | It is highly recommended to use one of these layout templates as your project's basis. All templates were tested in various browsers such as&nbsp;
+                    em Safari (Win/Mac/iOS)
+                    | ,&nbsp;
+                    em Google Chrome (Win/Mac)
+                    | ,&nbsp;
+                    em Mozilla Firefox (Win/Mac)
+                    | &nbsp;and even&nbsp;
+                    em Internet Explorer 9+
+                    | .
+                  hr
+                  .atk-align-center.atk-text-dimmed
+                    span.icon-resize-horizontal
+                    | &nbsp;Resize your browser's window to see template's behavior.
+                  hr
+                  .atk-row.atk-push
+                    .atk-col-4
+                      .atk-box-small.layout-template
+                        a.atk-box-small.atk-swatch-gray.atk-push-small(href='layouts/fixed.html')
+                          span.atk-box-small.atk-move-center.atk-push-small.atk-swatch-ink(style='width: 150px;')
+                          span.atk-box.atk-move-center.atk-push-small(style='width: 150px;')
+                          span.atk-box-small.atk-move-center(style='width: 150px;')
+                        .atk-align-center.atk-size-kilo
+                          a(href='layouts/fixed.html') Fixed
+                    .atk-col-4
+                      .atk-box-small.layout-template
+                        a.atk-box-small.atk-swatch-gray.atk-push-small(href='layouts/fixed-multicol.html')
+                          span.atk-box-small.atk-move-center.atk-push-small.atk-swatch-ink(style='width: 150px;')
+                          span.atk-move-center.atk-cells.atk-cells-gutter-small.atk-push-small(style='width: 150px;')
+                            span.atk-cell.atk-jackscrew
+                              span.atk-box.atk-move-center
+                            span.atk-cell
+                              span.atk-box.atk-move-center
+                          span.atk-box-small.atk-move-center(style='width: 150px;')
+                        .atk-align-center.atk-size-kilo
+                          a(href='layouts/fixed-multicol.html') Fixed Multi-Column
+                    .atk-col-4
+                      .atk-box-small.layout-template
+                        a.atk-box-small.atk-swatch-gray.atk-push-small(href='layouts/hybrid.html')
+                          span.atk-box-small.atk-move-center.atk-push-small.atk-swatch-ink(style='min-width: 150px; max-width: 250px; width: auto;')
+                          span.atk-box.atk-move-center.atk-push-small(style='min-width: 150px; max-width: 250px;')
+                          span.atk-box-small.atk-move-center(style='min-width: 150px; max-width: 250px;')
+                        .atk-align-center.atk-size-kilo
+                          a(href='layouts/hybrid.html') Hybrid
+                  .atk-row
+                    .atk-col-4
+                      .atk-box-small.layout-template
+                        a.atk-box-small.atk-swatch-gray.atk-push-small(href='layouts/fluid.html')
+                          span.atk-box-small.atk-move-center.atk-push-small.atk-swatch-ink
+                          span.atk-cells.atk-cells-gutter-small.atk-push-small
+                            span.atk-cell
+                              span.atk-box.atk-move-center
+                            span.atk-cell.atk-jackscrew
+                              span.atk-box.atk-move-center
+                            span.atk-cell
+                              span.atk-box.atk-move-center
+                          span.atk-box-small.atk-move-center
+                        .atk-align-center.atk-size-kilo
+                          a(href='layouts/fluid.html') Fluid
+                    .atk-col-4
+                      .atk-box-small.layout-template
+                        a.atk-box-small.atk-swatch-gray.atk-push-small(href='layouts/centered.html')
+                          span.atk-cells
+                            span.atk-cell.atk-align-center.atk-valign-middle.atk-text-reset(style='height: 134px;')
+                              span.atk-box.atk-inline
+                        .atk-align-center.atk-size-kilo
+                          a(href='layouts/centered.html') Centered
+    include includes/scripts
+    include includes/analytics

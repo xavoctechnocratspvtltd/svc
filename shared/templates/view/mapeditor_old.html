@@ -1,0 +1,142 @@
+<div id="{$_name}" class=" {$class} " style=" {$style} ">
+<!-- {$Content} -->
+<div id="xmapeditor-container">
+	<div class="map-editor-fixed-tool-panel" style="position:relative;"></div>
+	<div class="atk-row xmapeditor">
+		<div class="atk-col-12">
+			<div id="map"></div>
+		</div>
+	</div>
+	<div class="map-editor-info-container">
+		<div class="atk-row">
+			<div class="atk-col-2">
+				<span class="map-editor-info-draggable-handler atk-box-small icon-pin" style="cursor:move;"></span>
+			</div>
+			<div class="atk-col-10">
+				<div id="map-editor-tool-panel"></div>
+			</div>
+		</div>
+		<div id="component-info-panel"><h5>Selected Device Detail </h5></div>
+	</div>
+</div>
+
+<script>
+	mapeditor = undefined;
+	map = undefined;
+	markers = [];
+	function initMap() {
+	  map = new google.maps.Map(document.getElementById('map'), {
+		    center: {lat: 45.518, lng: -122.672},
+		    zoom: 2,
+		    mapTypeId: google.maps.MapTypeId.TERRAIN,
+		    // heading: 90,
+		    // tilt: 45
+		});
+	 	//set MapTypeId id. SATELLITE, HYBRID, ROADMAP,TERRAIN
+		this.mapeditor = mapeditor = $(".mapeditor").data("ui-mapEditor");
+		// drawLine();
+	}
+		//Test Code For Accessing Jquery Widget object and it's method()
+		 	//accessing Jquery mapeditor and set Google map object to this option
+			// mapeditor.options.gmap = map;
+			// function addLamp(){
+			// 	mapeditor = this.mapeditor;
+			// 	mapeditor.addMarker();
+			// }
+
+	function addMarker(latitude,longitude,type,network_id,device_id,content) {
+		var circle = {
+				    path: google.maps.SymbolPath.CIRCLE,
+				    fillColor: '#FF0000',
+				    fillOpacity: 1,
+				    scale: 1,
+				    strokeColor: '#FF0000',
+				    strokeWeight: 14
+				  };
+
+		var myLatLng = {lat: latitude, lng: longitude};
+		// alert("Lat="+latitude+"Lng="+longitude);
+	    marker = new google.maps.Marker({
+            position: myLatLng,
+            icon:circle,
+            map: map,
+	    	// Attributions help users find your site again.
+	    	attribution: {
+	      		source: 'Google Maps JavaScript API',
+	      		webUrl: 'https://developers.google.com/maps/',
+	    	},
+	    	device_type:type,
+	    	network_id:network_id,
+	    	device_id:device_id
+        });
+
+        //Managing the array of markers
+	    markers.push[marker];
+	  	// Construct a new InfoWindow.
+	  	var infoWindow = new google.maps.InfoWindow({
+	   		content: content
+	  	});
+		// Opens the InfoWindow when marker is clicked.
+		marker.addListener('click', function() {
+			if(this.mapeditor == undefined)
+				this.mapeditor = $(".mapeditor").data("ui-mapEditor");
+
+			var device_component = new window[marker.device_type+'_Component']();
+			device_component.init(this.mapeditor);
+			device_component.setOptions(this.network_id,this.device_id);
+			device_component.showInfo(this);
+			// this.mapeditor = mapeditor = $(".mapeditor").data("ui-mapEditor");
+	  	});
+    }
+
+
+	function rotate90() {
+	  var heading = map.getHeading() || 0;
+	  map.setHeading(heading + 90);
+	}
+
+	function autoRotate() {
+	  // Determine if we're showing aerial imagery.
+	  if (map.getTilt() !== 0) {
+	    window.setInterval(rotate90, 3000);
+	  }
+	}
+
+	function drawLine(cordinates){
+		var flightPlanCoordinates = [
+		    {lat: 50, lng: 20,device_type:'lamp','network_id':11,'device_id':20},
+		    {lat: 50, lng: 30,device_type:'lamp','network_id':31,'device_id':21},
+		    {lat: 50, lng: 40,device_type:'lamp','network_id':11,'device_id':22},
+		    {lat: 50, lng: 50,device_type:'lamp','network_id':21,'device_id':23}
+		  ];
+
+		$.each(cordinates,function(index,lamp_cordinate){
+			flightPlanCoordinates.push(lamp_cordinate);
+		});
+
+		var flightPath = new google.maps.Polyline({
+		    path: flightPlanCoordinates,
+		    geodesic: true,
+		    strokeColor: '#FF0000',
+		    strokeOpacity: 1.0,
+		    strokeWeight: 2
+		  });
+
+		flightPath.setMap(map);
+
+	//Handle Click event of 
+	google.maps.event.addListener(flightPath, 'click', function() {
+		$.each(flightPlanCoordinates, function(index, marker) {
+		 	addMarker(marker.lat,marker.lng,marker.device_type,marker.network_id,marker.device_id);
+		 });
+    });
+
+	}
+
+</script>
+
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBd48VpX8kjYNPHzTco64K6W2VDmvJy3ds&signed_in=true&libraries=places&callback=initMap"
+        async defer>
+</script>
+
+</div>
