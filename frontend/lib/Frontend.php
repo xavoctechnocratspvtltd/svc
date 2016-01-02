@@ -31,7 +31,7 @@ class Frontend extends ApiFrontend {
         $auth->allowPage(array('index'));
         $auth->setModel($frontend_user,'name','password');
         
-        $this->add('Layout_Fluid');
+        $this->add('Layout_Empty');
 
         $auth->check();
         //$footer=$l->addFooter();
@@ -45,7 +45,7 @@ class Frontend extends ApiFrontend {
 
 
 
-        $client_menu=$this->layout->add('Menu',['swatch'=>''],'Top_Menu')->addClass('mymenu');
+        // $client_menu=$this->layout->add('Menu',['swatch'=>''],'Top_Menu')->addClass('mymenu');
         // if($this->api->auth->isLoggedIn()){
         //     $client_menu->addMenuItem('dashboard','Dashbaord');
         //     $client_menu->addMenuItem('oln','Devices (Temp Menu)');
@@ -54,7 +54,7 @@ class Frontend extends ApiFrontend {
         //     $client_menu->addMenuItem('clientconfig','Configuration');
 
         // }
-        $client_menu->addMenuItem('logout','Logout');
+        // $client_menu->addMenuItem('logout','Logout');
 
 
         //$footer->add('View')->set('Design and Implemented by agiletoolkit.org');
