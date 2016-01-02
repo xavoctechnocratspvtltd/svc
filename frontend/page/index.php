@@ -3,6 +3,10 @@ class page_index extends Page{
     function init(){
         parent::init();
 
-        // $this->add('View_Registration');
+        
+    }
+
+    function defaultTemplate(){
+    	return ['pages/index'];
     }
 }
