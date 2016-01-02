@@ -6,8 +6,7 @@ class Model_User extends SQL_Model {
 
 	function init(){
 		parent::init();
-
-		$this->hasOne('Company','company_id');
+		
 		$this->addField('name')->mandatory(true)->caption('User Name');
 		$this->addField('surname')->mandatory(true);
 		$this->addField('username')->mandatory(true);

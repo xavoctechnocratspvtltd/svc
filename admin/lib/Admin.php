@@ -37,38 +37,18 @@ class Admin extends App_Admin {
         $m=$this->layout->add('Menu_Horizontal',null,'Top_Menu');
         
 
-        $m->addMenuItem('/', 'Home');
-
-        // Invitation Menu
-        $m->addMenuItem('invitations_index','Invitations');
-
-        //Clients Menu
-        $m->addMenuItem('companies/index','Companies');
-        // $user_menu = $m->addMenu('Clients');
-        // $user_menu->addMenuItem('users/permissions','Permissions');
-        // $user_menu->addMenuItem('users/accesslist','Access List');
-
-        // Locations
-        $m->addMenuItem('locations/index','Locations');
-
-        
-        // Network Menu
-        // $network_menu = $m->addMenu('Networks');
-        // $network_menu->addMenuItem($this->api->url('network/oln',array('client_id'=>$_GET['client_id'])), 'OLN Management');
-        // $network_menu->addMenuItem('network/group','Groups Management');
-        // $network_menu->addMenuItem($this->api->url('network/mapeditor',array('client_id'=>$_GET['client_id'])),'Map Editor');
-
-        
+        // $m->addMenuItem('/', 'Home');
+         
         //Setting Menu
-        $setting_menu = $m->addMenu('Setting');
-        $setting_menu->addMenuItem($this->api->url('setting/lamptype',array('client_id'=>$_GET['client_id'])),'Lamp Types');
-        $setting_menu->addMenuItem($this->api->url('setting/programControl',array('client_id'=>$_GET['client_id'])),'Program Control');
-        $setting_menu->addMenuItem($this->api->url('setting/calendarManagement',array('client_id'=>$_GET['client_id'])),'Calendar Management');
-        $setting_menu->addMenuItem($this->api->url('setting/locationManagement',array('client_id'=>$_GET['client_id'])),'Location Management');
-        $setting_menu->addMenuItem($this->api->url('setting/logManagement',array('client_id'=>$_GET['client_id'])),'Log Management');
+        // $setting_menu = $m->addMenu('Setting');
+        // $setting_menu->addMenuItem($this->api->url('setting/lamptype',array('client_id'=>$_GET['client_id'])),'Lamp Types');
+        // $setting_menu->addMenuItem($this->api->url('setting/programControl',array('client_id'=>$_GET['client_id'])),'Program Control');
+        // $setting_menu->addMenuItem($this->api->url('setting/calendarManagement',array('client_id'=>$_GET['client_id'])),'Calendar Management');
+        // $setting_menu->addMenuItem($this->api->url('setting/locationManagement',array('client_id'=>$_GET['client_id'])),'Location Management');
+        // $setting_menu->addMenuItem($this->api->url('setting/logManagement',array('client_id'=>$_GET['client_id'])),'Log Management');
 
         //Logout
-        $m->addMenuItem('logout','Logout');
+        $m->addMenuItem('logout','Logout')->addClass('atk-swatch-red');
 
     }
 }
