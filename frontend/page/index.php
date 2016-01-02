@@ -12,15 +12,17 @@ class page_index extends Page{
         $this->api->jui->addStaticStylesheet('responsive','.css');
         $this->api->jui->addStaticStylesheet('presets/preset1','.css');
 
+        $this->api->jui->addStaticInclude('http://maps.google.com/maps/api/js?sensor=true','.css','js');
         $this->js(true)->_load('bootstrap.min');
         $this->js(true)->_load('wow.min');
         $this->js(true)->_load('mousescroll');
         $this->js(true)->_load('smoothscroll');
         $this->js(true)->_load('jquery.countTo');
         $this->js(true)->_load('lightbox.min');
+        $this->js(true)->_load('highcharts');
+        // $this->js(true)->_load('map');
         $this->js(true)->_load('main');
-        $this->api->jui->addStaticInclude('http://maps.google.com/maps/api/js?sensor=true','.css','js');
-        
+        $this->js(true)->_load('svc');
     }
 
     function defaultTemplate(){
