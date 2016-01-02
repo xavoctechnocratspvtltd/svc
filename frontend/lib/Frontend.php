@@ -20,27 +20,18 @@ class Frontend extends ApiFrontend {
 
         $this->api_public_path = dirname(@$_SERVER['SCRIPT_FILENAME']);
         $this->api_base_path = dirname(dirname(@$_SERVER['SCRIPT_FILENAME']));
-        $this->template->set('css','vizi.css');
+        $this->template->set('css','svc.css');
 
         $this->add('jUI');
         
         $frontend_user = $this->add('Model_User')
                         ->addCondition('type','Frontend');
 
-        $auth = $this->add('BasicAuth',['login_layout_class'=>'Layout_ViziLogin']);
-        $auth->allowPage(array('playground','ui','reset','aboutus','contactus','registration','notification','configuration','dataCollect','groupMgmt','lightControl','onDemandData'));
+        $auth = $this->add('BasicAuth');
+        $auth->allowPage(array('index'));
         $auth->setModel($frontend_user,'name','password');
         
-
-        if($this->auth->isLoggedIn()){
-            $l=$this->add('Layout_Fluid');
-            if(in_array($this->page, ['dashboard'])){
-                $l->template->del('city_image');
-            }
-        }else{
-            $l= $this->add('Layout_ViziLogin');
-            $l->setAlign('center','80%');
-        }
+        $this->add('Layout_Fluid');
 
         $auth->check();
         //$footer=$l->addFooter();
@@ -54,16 +45,16 @@ class Frontend extends ApiFrontend {
 
 
 
-        if($this->api->auth->isLoggedIn()){
-            $client_menu=$this->layout->add('Menu',['swatch'=>''],'Top_Menu')->addClass('mymenu');
-            $client_menu->addMenuItem('dashboard','Dashbaord');
-            $client_menu->addMenuItem('oln','Devices (Temp Menu)');
-            $client_menu->addMenuItem('graph','Graph');
-            $client_menu->addMenuItem('calendar','Calendar');
-            $client_menu->addMenuItem('clientconfig','Configuration');
-            $client_menu->addMenuItem('logout','Logout');
+        $client_menu=$this->layout->add('Menu',['swatch'=>''],'Top_Menu')->addClass('mymenu');
+        // if($this->api->auth->isLoggedIn()){
+        //     $client_menu->addMenuItem('dashboard','Dashbaord');
+        //     $client_menu->addMenuItem('oln','Devices (Temp Menu)');
+        //     $client_menu->addMenuItem('graph','Graph');
+        //     $client_menu->addMenuItem('calendar','Calendar');
+        //     $client_menu->addMenuItem('clientconfig','Configuration');
 
-        }
+        // }
+        $client_menu->addMenuItem('logout','Logout');
 
 
         //$footer->add('View')->set('Design and Implemented by agiletoolkit.org');

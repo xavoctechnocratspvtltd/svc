@@ -7,6 +7,5 @@ class page_dashboard extends Page{
 
 		$this->api->title = "Dashboard";
 
-		$this->add('View_MapEditor');
 	}
 }
