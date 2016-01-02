@@ -1,0 +1,721 @@
+// .preloader
+.preloader
+  i.fa.fa-circle-o-notch.fa-spin
+// /.preloader
+header#home
+  #home-slider.carousel.slide.carousel-fade(data-ride='carousel')
+    .carousel-inner
+      .item.active(style='background-image: url(images/slider/1.jpg)')
+        .caption
+          h1.animated.fadeInLeftBig
+            | Welcome to 
+            span SVC
+          p.animated.fadeInRightBig Student Virtual Corporate
+          a.btn.btn-start.animated.fadeInUpBig(data-scroll='', href='#services') What is this
+      .item(style='background-image: url(images/slider/2.jpg)')
+        .caption
+          h1.animated.fadeInLeftBig
+            | Say Hello to 
+            span SVC
+          p.animated.fadeInRightBig Student Virtual Corporate
+          a.btn.btn-start.animated.fadeInUpBig(data-scroll='', href='#services') What is this
+      .item(style='background-image: url(images/slider/3.jpg)')
+        .caption
+          h1.animated.fadeInLeftBig
+            | We are 
+            span Creative
+          p.animated.fadeInRightBig Student Virtual Corporate
+          a.btn.btn-start.animated.fadeInUpBig(data-scroll='', href='#services') What is this
+    a.left-control(href='#home-slider', data-slide='prev')
+      i.fa.fa-angle-left
+    a.right-control(href='#home-slider', data-slide='next')
+      i.fa.fa-angle-right
+    a#tohash(href='#services')
+      i.fa.fa-angle-down
+  // /#home-slider
+  .main-nav
+    .container
+      .navbar-header
+        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+          span.sr-only Toggle navigation
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand(href='index.html')
+          h1
+            img.img-responsive(src='images/logo.png', alt='logo')
+      .collapse.navbar-collapse
+        ul.nav.navbar-nav.navbar-right
+          li.scroll.active
+            a(href='#home') Home
+          li.scroll
+            a(href='#intro') Intro
+          li.scroll
+            a(href='#about-us') About Us
+          li.scroll
+            a(href='#services') Service
+          li.scroll
+            a(href='#portfolio') Portfolio
+          li.scroll
+            a(href='#team') Team
+          li.scroll
+            a(href='#blog') Blog
+          li.scroll
+            a(href='#contact') Contact
+  // /#main-nav
+// /#home
+//Intro
+section#intro
+  .container
+    .row
+      .col-sm-4
+        .about-info.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='300ms')
+          h2 What is SVC
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          p
+            | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      .text-center.col-sm-8
+        .about-info.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='300ms')
+          h2 Brand Identity
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          img(src="images/video.jpg" height="280px")
+
+// /#intro
+// Features
+section#features.parallax
+  .container
+    .row.count
+      .col-sm-12.col-xs-6.wow.fadeInLeft(data-wow-duration='1000ms', data-wow-delay='300ms')
+        h2 Point so far
+        h3.timer.points( data-startnumber="0" data-endnumber="6754387" ) 9090
+      //- .col-sm-3.col-xs-6.wow.fadeInLeft(data-wow-duration='1000ms', data-wow-delay='500ms')
+      //-   i.fa.fa-desktop
+      //-   h3.timer 200
+      //-   p Modern Websites
+      //- .col-sm-3.col-xs-6.wow.fadeInLeft(data-wow-duration='1000ms', data-wow-delay='700ms')
+      //-   i.fa.fa-trophy
+      //-   h3.timer 10
+      //-   p WINNING AWARDS
+      //- .col-sm-3.col-xs-6.wow.fadeInLeft(data-wow-duration='1000ms', data-wow-delay='900ms')
+      //-   i.fa.fa-comment-o
+      //-   h3 24/7
+      //-   p Fast Support
+// /#features
+section#about-us
+  .container
+    .row
+      .col-sm-6
+        .about-info.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='300ms')
+          h2 About us
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.Ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          p
+            | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      .col-sm-6
+        .our-skills.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='300ms')
+          .single-skill.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='300ms')
+            p.lead User Experiances
+            .progress
+              .progress-bar.progress-bar-primary.six-sec-easea(class='</div> <div class=', single-skill='', wow='', data-wow-duration='1000ms', data-wow-delay='400ms')
+            p.lead Web Design
+            .progress
+              .progress-bar.progress-bar-primary.six-sec-ease-in-out(role='progressbar', aria-valuetransitiongoal='75') 75%
+            .single-skill.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='500ms')
+            p.lead Programming
+            .progress
+              .progress-bar.progress-bar-primary.six-sec-ease-in-out(role='progressbar', aria-valuetransitiongoal='60') 60%
+            .single-skill.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='600ms')
+            p.lead Fun
+            .progress
+              .progress-bar.progress-bar-primary.six-sec-ease-in-out(role='progressbar', aria-valuetransitiongoal='85') 85%
+// /#about-us
+
+section#services
+  .container
+    .heading.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='300ms')
+      .row
+        .text-center.col-sm-8.col-sm-offset-2
+          h2 Our Services
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam
+    .text-center.our-services
+      .row
+        .col-sm-4.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='300ms')
+          .service-icon
+            i.fa.fa-flask
+          .service-info
+            h3 Brand Identity
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        .col-sm-4.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='450ms')
+          .service-icon
+            i.fa.fa-umbrella
+          .service-info
+            h3 Creative Idea
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        .col-sm-4.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='550ms')
+          .service-icon
+            i.fa.fa-cloud
+          .service-info
+            h3 Awesome Support
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        .col-sm-4.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='650ms')
+          .service-icon
+            i.fa.fa-coffee
+          .service-info
+            h3 Professional Design
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        .col-sm-4.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='750ms')
+          .service-icon
+            i.fa.fa-bitbucket
+          .service-info
+            h3 App Development
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        .col-sm-4.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='850ms')
+          .service-icon
+            i.fa.fa-gift
+          .service-info
+            h3 Clean Code
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+// /#services
+
+section#portfolio
+  .container
+    .row
+      .heading.text-center.col-sm-8.col-sm-offset-2.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='300ms')
+        h2 Our Portfolio
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam
+  .container-fluid
+    .row
+      .col-sm-3
+        .folio-item.wow.fadeInRightBig(data-wow-duration='1000ms', data-wow-delay='300ms')
+          .folio-image
+            img.img-responsive(src='images/portfolio/1.jpg', alt='')
+          .overlay
+            .overlay-content
+              .overlay-text
+                .folio-info
+                  h3 Time Hours
+                  p Design, Photography
+                .folio-overview
+                  span.folio-link
+                    a.folio-read-more(href='#', data-single_url='portfolio-single.html')
+                      i.fa.fa-link
+                  span.folio-expand
+                    a(href='images/portfolio/portfolio-details.jpg', data-lightbox='portfolio')
+                      i.fa.fa-search-plus
+      .col-sm-3
+        .folio-item.wow.fadeInLeftBig(data-wow-duration='1000ms', data-wow-delay='400ms')
+          .folio-image
+            img.img-responsive(src='images/portfolio/2.jpg', alt='')
+          .overlay
+            .overlay-content
+              .overlay-text
+                .folio-info
+                  h3 Time Hours
+                  p Design, Photography
+                .folio-overview
+                  span.folio-link
+                    a.folio-read-more(href='#', data-single_url='portfolio-single.html')
+                      i.fa.fa-link
+                  span.folio-expand
+                    a(href='images/portfolio/portfolio-details.jpg', data-lightbox='portfolio')
+                      i.fa.fa-search-plus
+      .col-sm-3
+        .folio-item.wow.fadeInRightBig(data-wow-duration='1000ms', data-wow-delay='500ms')
+          .folio-image
+            img.img-responsive(src='images/portfolio/3.jpg', alt='')
+          .overlay
+            .overlay-content
+              .overlay-text
+                .folio-info
+                  h3 Time Hours
+                  p Design, Photography
+                .folio-overview
+                  span.folio-link
+                    a.folio-read-more(href='#', data-single_url='portfolio-single.html')
+                      i.fa.fa-link
+                  span.folio-expand
+                    a(href='images/portfolio/portfolio-details.jpg', data-lightbox='portfolio')
+                      i.fa.fa-search-plus
+      .col-sm-3
+        .folio-item.wow.fadeInLeftBig(data-wow-duration='1000ms', data-wow-delay='600ms')
+          .folio-image
+            img.img-responsive(src='images/portfolio/4.jpg', alt='')
+          .overlay
+            .overlay-content
+              .overlay-text
+                .folio-info
+                  h3 Time Hours
+                  p Design, Photography
+                .folio-overview
+                  span.folio-link
+                    a.folio-read-more(href='#', data-single_url='portfolio-single.html')
+                      i.fa.fa-link
+                  span.folio-expand
+                    a(href='images/portfolio/portfolio-details.jpg', data-lightbox='portfolio')
+                      i.fa.fa-search-plus
+      .col-sm-3
+        .folio-item.wow.fadeInRightBig(data-wow-duration='1000ms', data-wow-delay='700ms')
+          .folio-image
+            img.img-responsive(src='images/portfolio/5.jpg', alt='')
+          .overlay
+            .overlay-content
+              .overlay-text
+                .folio-info
+                  h3 Time Hours
+                  p Design, Photography
+                .folio-overview
+                  span.folio-link
+                    a.folio-read-more(href='#', data-single_url='portfolio-single.html')
+                      i.fa.fa-link
+                  span.folio-expand
+                    a(href='images/portfolio/portfolio-details.jpg', data-lightbox='portfolio')
+                      i.fa.fa-search-plus
+      .col-sm-3
+        .folio-item.wow.fadeInLeftBig(data-wow-duration='1000ms', data-wow-delay='800ms')
+          .folio-image
+            img.img-responsive(src='images/portfolio/6.jpg', alt='')
+          .overlay
+            .overlay-content
+              .overlay-text
+                .folio-info
+                  h3 Time Hours
+                  p Design, Photography
+                .folio-overview
+                  span.folio-link
+                    a.folio-read-more(href='#', data-single_url='portfolio-single.html')
+                      i.fa.fa-link
+                  span.folio-expand
+                    a(href='images/portfolio/portfolio-details.jpg', data-lightbox='portfolio')
+                      i.fa.fa-search-plus
+      .col-sm-3
+        .folio-item.wow.fadeInRightBig(data-wow-duration='1000ms', data-wow-delay='900ms')
+          .folio-image
+            img.img-responsive(src='images/portfolio/7.jpg', alt='')
+          .overlay
+            .overlay-content
+              .overlay-text
+                .folio-info
+                  h3 Time Hours
+                  p Design, Photography
+                .folio-overview
+                  span.folio-link
+                    a.folio-read-more(href='#', data-single_url='portfolio-single.html')
+                      i.fa.fa-link
+                  span.folio-expand
+                    a(href='images/portfolio/portfolio-details.jpg', data-lightbox='portfolio')
+                      i.fa.fa-search-plus
+      .col-sm-3
+        .folio-item.wow.fadeInLeftBig(data-wow-duration='1000ms', data-wow-delay='1000ms')
+          .folio-image
+            img.img-responsive(src='images/portfolio/8.jpg', alt='')
+          .overlay
+            .overlay-content
+              .overlay-text
+                .folio-info
+                  h3 Time Hours
+                  p Design, Photography
+                .folio-overview
+                  span.folio-link
+                    a.folio-read-more(href='#', data-single_url='portfolio-single.html')
+                      i.fa.fa-link
+                  span.folio-expand
+                    a(href='images/portfolio/portfolio-details.jpg', data-lightbox='portfolio')
+                      i.fa.fa-search-plus
+  #portfolio-single-wrap
+    #portfolio-single
+  // /#portfolio-single-wrap
+// /#portfolio
+section#team
+  .container
+    .row
+      .heading.text-center.col-sm-8.col-sm-offset-2.wow.fadeInUp(data-wow-duration='1200ms', data-wow-delay='300ms')
+        h2 The Team
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam
+    .team-members
+      .row
+        .col-sm-3
+          .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='300ms')
+            .member-image
+              img.img-responsive(src='images/team/1.jpg', alt='')
+            .member-info
+              h3 Marian Dixon
+              h4 CEO & Founder
+              p Consectetur adipisicing elit, sed do eiusmod tempor incididunt
+            .social-icons
+              ul
+                li
+                  a.facebook(href='#')
+                    i.fa.fa-facebook
+                li
+                  a.twitter(href='#')
+                    i.fa.fa-twitter
+                li
+                  a.linkedin(href='#')
+                    i.fa.fa-linkedin
+                li
+                  a.dribbble(href='#')
+                    i.fa.fa-dribbble
+                li
+                  a.rss(href='#')
+                    i.fa.fa-rss
+        .col-sm-3
+          .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='500ms')
+            .member-image
+              img.img-responsive(src='images/team/2.jpg', alt='')
+            .member-info
+              h3 Lawrence Lane
+              h4 UI/UX Designer
+              p Consectetur adipisicing elit, sed do eiusmod tempor incididunt
+            .social-icons
+              ul
+                li
+                  a.facebook(href='#')
+                    i.fa.fa-facebook
+                li
+                  a.twitter(href='#')
+                    i.fa.fa-twitter
+                li
+                  a.linkedin(href='#')
+                    i.fa.fa-linkedin
+                li
+                  a.dribbble(href='#')
+                    i.fa.fa-dribbble
+                li
+                  a.rss(href='#')
+                    i.fa.fa-rss
+        .col-sm-3
+          .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='800ms')
+            .member-image
+              img.img-responsive(src='images/team/3.jpg', alt='')
+            .member-info
+              h3 Lois Clark
+              h4 Developer
+              p Consectetur adipisicing elit, sed do eiusmod tempor incididunt
+            .social-icons
+              ul
+                li
+                  a.facebook(href='#')
+                    i.fa.fa-facebook
+                li
+                  a.twitter(href='#')
+                    i.fa.fa-twitter
+                li
+                  a.linkedin(href='#')
+                    i.fa.fa-linkedin
+                li
+                  a.dribbble(href='#')
+                    i.fa.fa-dribbble
+                li
+                  a.rss(href='#')
+                    i.fa.fa-rss
+        .col-sm-3
+          .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='1100ms')
+            .member-image
+              img.img-responsive(src='images/team/4.jpg', alt='')
+            .member-info
+              h3 Marian Dixon
+              h4 Support Manager
+              p Consectetur adipisicing elit, sed do eiusmod tempor incididunt
+            .social-icons
+              ul
+                li
+                  a.facebook(href='#')
+                    i.fa.fa-facebook
+                li
+                  a.twitter(href='#')
+                    i.fa.fa-twitter
+                li
+                  a.linkedin(href='#')
+                    i.fa.fa-linkedin
+                li
+                  a.dribbble(href='#')
+                    i.fa.fa-dribbble
+                li
+                  a.rss(href='#')
+                    i.fa.fa-rss
+// /#team
+section#pricing
+  .container
+    .row
+      .heading.text-center.col-sm-8.col-sm-offset-2.wow.fadeInUp(data-wow-duration='1200ms', data-wow-delay='300ms')
+        h2 Pricing Table
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam
+    .pricing-table
+      .row
+        .col-sm-3
+          .single-table.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='300ms')
+            h3 Basic
+            .price
+              | $9
+              span /Month
+            ul
+              li Free Setup
+              li 10GB Storage
+              li 100GB Bandwith
+              li 5 Products
+            a.btn.btn-lg.btn-primary(href='#') Sign up
+        .col-sm-3
+          .single-table.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='500ms')
+            h3 Standard
+            .price
+              | $19
+              span /Month
+            ul
+              li Free Setup
+              li 10GB Storage
+              li 100GB Bandwith
+              li 5 Products
+            a.btn.btn-lg.btn-primary(href='#') Sign up
+        .col-sm-3
+          .single-table.featured.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='800ms')
+            h3 Featured
+            .price
+              | $29
+              span /Month
+            ul
+              li Free Setup
+              li 10GB Storage
+              li 100GB Bandwith
+              li 5 Products
+            a.btn.btn-lg.btn-primary(href='#') Sign up
+        .col-sm-3
+          .single-table.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='1100ms')
+            h3 Professional
+            .price
+              | $49
+              span /Month
+            ul
+              li Free Setup
+              li 10GB Storage
+              li 100GB Bandwith
+              li 5 Products
+            a.btn.btn-lg.btn-primary(href='#') Sign up
+// /#pricing
+section#twitter.parallax
+  div
+    a.twitter-left-control(href='#twitter-carousel', role='button', data-slide='prev')
+      i.fa.fa-angle-left
+    a.twitter-right-control(href='#twitter-carousel', role='button', data-slide='next')
+      i.fa.fa-angle-right
+    .container
+      .row
+        .col-sm-8.col-sm-offset-2
+          .twitter-icon.text-center
+            i.fa.fa-twitter
+            h4 Themeum
+          #twitter-carousel.carousel.slide(data-ride='carousel')
+            .carousel-inner
+              .item.active.wow.fadeIn(data-wow-duration='1000ms', data-wow-delay='300ms')
+                p
+                  | Introducing Shortcode generator for Helix V2 based templates 
+                  a(href='#')
+                    span #helixframework #joomla
+                    |  http://bit.ly/1qlgwav
+              .item
+                p
+                  | Introducing Shortcode generator for Helix V2 based templates 
+                  a(href='#')
+                    span #helixframework #joomla
+                    |  http://bit.ly/1qlgwav
+              .item
+                p
+                  | Introducing Shortcode generator for Helix V2 based templates 
+                  a(href='#')
+                    span #helixframework #joomla
+                    |  http://bit.ly/1qlgwav
+// /#twitter
+section#blog
+  .container
+    .row
+      .heading.text-center.col-sm-8.col-sm-offset-2.wow.fadeInUp(data-wow-duration='1200ms', data-wow-delay='300ms')
+        h2 Blog Posts
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam
+    .blog-posts
+      .row
+        .col-sm-4.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='400ms')
+          .post-thumb
+            a(href='#')
+              img.img-responsive(src='images/blog/1.jpg', alt='')
+            .post-meta
+              span
+                i.fa.fa-comments-o
+                |  3 Comments
+              span
+                i.fa.fa-heart
+                |  0 Likes
+            .post-icon
+              i.fa.fa-pencil
+          .entry-header
+            h3
+              a(href='#') Lorem ipsum dolor sit amet consectetur adipisicing elit
+            span.date June 26, 2014
+            span.cetagory
+              | in 
+              strong Photography
+          .entry-content
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .col-sm-4.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='600ms')
+          .post-thumb
+            #post-carousel.carousel.slide(data-ride='carousel')
+              ol.carousel-indicators
+                li.active(data-target='#post-carousel', data-slide-to='0')
+                li(data-target='#post-carousel', data-slide-to='1')
+                li(data-target='#post-carousel', data-slide-to='2')
+              .carousel-inner
+                .item.active
+                  a(href='#')
+                    img.img-responsive(src='images/blog/2.jpg', alt='')
+                .item
+                  a(href='#')
+                    img.img-responsive(src='images/blog/1.jpg', alt='')
+                .item
+                  a(href='#')
+                    img.img-responsive(src='images/blog/3.jpg', alt='')
+              a.blog-left-control(href='#post-carousel', role='button', data-slide='prev')
+                i.fa.fa-angle-left
+              a.blog-right-control(href='#post-carousel', role='button', data-slide='next')
+                i.fa.fa-angle-right
+            .post-meta
+              span
+                i.fa.fa-comments-o
+                |  3 Comments
+              span
+                i.fa.fa-heart
+                |  0 Likes
+            .post-icon
+              i.fa.fa-picture-o
+          .entry-header
+            h3
+              a(href='#') Lorem ipsum dolor sit amet consectetur adipisicing elit
+            span.date June 26, 2014
+            span.cetagory
+              | in 
+              strong Photography
+          .entry-content
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        .col-sm-4.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='800ms')
+          .post-thumb
+            a(href='#')
+              img.img-responsive(src='images/blog/3.jpg', alt='')
+            .post-meta
+              span
+                i.fa.fa-comments-o
+                |  3 Comments
+              span
+                i.fa.fa-heart
+                |  0 Likes
+            .post-icon
+              i.fa.fa-video-camera
+          .entry-header
+            h3
+              a(href='#') Lorem ipsum dolor sit amet consectetur adipisicing elit
+            span.date June 26, 2014
+            span.cetagory
+              | in 
+              strong Photography
+          .entry-content
+            p
+              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+      .load-more.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='500ms')
+        a.btn-loadmore(href='#')
+          i.fa.fa-repeat
+          |  Load More
+// /#blog
+section#contact
+  #google-map.wow.fadeIn(data-latitude='52.365629', data-longitude='4.871331', data-wow-duration='1000ms', data-wow-delay='400ms')
+  #contact-us.parallax
+    .container
+      .row
+        .heading.text-center.col-sm-8.col-sm-offset-2.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='300ms')
+          h2 Contact Us
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam
+      .contact-form.wow.fadeIn(data-wow-duration='1000ms', data-wow-delay='600ms')
+        .row
+          .col-sm-6
+            form#main-contact-form(name='contact-form', method='post', action='#')
+              .row.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='300ms')
+                .col-sm-6
+                  .form-group
+                    input.form-control(type='text', name='name', placeholder='Name', required='required')
+                .col-sm-6
+                  .form-group
+                    input.form-control(type='email', name='email', placeholder='Email Address', required='required')
+              .form-group
+                input.form-control(type='text', name='subject', placeholder='Subject', required='required')
+              .form-group
+                textarea#message.form-control(name='message', rows='4', placeholder='Enter your message', required='required')
+              .form-group
+                button.btn-submit(type='submit') Send Now
+          .col-sm-6
+            .contact-info.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='300ms')
+              p
+                | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
+              ul.address
+                li
+                  i.fa.fa-map-marker
+                  span  Address:
+                  |  2400 South Avenue A
+                li
+                  i.fa.fa-phone
+                  span  Phone:
+                  |  +928 336 2000
+                li
+                  i.fa.fa-envelope
+                  span  Email:
+                  a(href='mailto:someone@yoursite.com')  support@oxygen.com
+                li
+                  i.fa.fa-globe
+                  span  Website:
+                  a(href='#') www.sitename.com
+// /#contact
+footer#footer
+  .footer-top.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='300ms')
+    .container.text-center
+      .footer-logo
+        a(href='index.html')
+          img.img-responsive(src='images/logo.png', alt='')
+      .social-icons
+        ul
+          li
+            a.envelope(href='#')
+              i.fa.fa-envelope
+          li
+            a.twitter(href='#')
+              i.fa.fa-twitter
+          li
+            a.dribbble(href='#')
+              i.fa.fa-dribbble
+          li
+            a.facebook(href='#')
+              i.fa.fa-facebook
+          li
+            a.linkedin(href='#')
+              i.fa.fa-linkedin
+          li
+            a.tumblr(href='#')
+              i.fa.fa-tumblr-square
+  .footer-bottom
+    .container
+      .row
+        .col-sm-6
+          p © 2015 Student Virtual Corporate.
+        .col-sm-6
+          p.pull-right
+            | 
+            a(href='http://www.studentscorporate.com/')
