@@ -27,6 +27,12 @@ class page_index extends Page{
         // $this->js(true)->_load('map');
         $this->js(true)->_load('main');
         $this->js(true)->_load('svc');
+
+
+        $form = $this->add('Form',null,'svcform',['page/home','svcform']);
+        $form->addField('line','name','name');
+        // $hospital_images = $this->add('CompleteLister',null,'hospital_photos',array('page/hospital','hospital_photos'));
+        
     }
 
     function defaultTemplate(){

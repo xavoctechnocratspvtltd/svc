@@ -495,7 +495,27 @@
       </div>
       <div data-wow-duration="1000ms" data-wow-delay="600ms" class="contact-form wow fadeIn">
         <div class="row">
-          <div class="col-sm-6">
+          <div class="col-sm-6">{svcform}
+            <div class="atk-swatch-red">Atk Form</div>
+            <div style="{$style}" id="{$_name}" class="atk-form {$class}">
+              <form class="{$form_class}" action="{$form_action}" method="{form_method}post{/}" {$enctype} {$attributes} >
+              {Content}
+              {form_line}
+              <div class="atk-cell">
+                <div class="atk-push-xsmall">
+                  <label class="atk-text-bold">Name</label>
+                </div>
+                <div class="atk-form-row atk-form-field">{$name}</div>
+              </div>{/}
+              {/}
+              {button_row}
+              <div class="atk-cells atk-cells-gutter-large">
+                <div class="atk-cell">
+                  <div class="atk-cell atk-actions {$buttons_class}">{$form_buttons}</div>
+                </div>
+              </div>{/button_row}
+              </form>
+            </div>{/svcform}
             <form id="main-contact-form" name="contact-form" method="post" action="#">
               <div data-wow-duration="1000ms" data-wow-delay="300ms" class="row wow fadeInUp">
                 <div class="col-sm-6">
