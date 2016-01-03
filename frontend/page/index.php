@@ -30,7 +30,7 @@ class page_index extends Page{
     }
 
     function defaultTemplate(){
-    	return ['layout/home'];
+    	return ['page/home'];
     }
 
 }
