@@ -10,7 +10,7 @@
             }
         },
         title: {
-            text: 'Browser market shares at a specific website, 2014'
+            text: 'gMarks contributions'
         },
         tooltip: {
             pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
@@ -28,19 +28,10 @@
         },
         series: [{
             type: 'pie',
-            name: 'Browser share',
+            name: 'Gender Share',
             data: [
-                ['Firefox', 45.0],
-                ['IE', 26.8],
-                {
-                    name: 'Chrome',
-                    y: 12.8,
-                    sliced: true,
-                    selected: true
-                },
-                ['Safari', 8.5],
-                ['Opera', 6.2],
-                ['Others', 0.7]
+                ['Male', 45.0],
+                ['Female', 55.0]
             ]
         }]
     });
