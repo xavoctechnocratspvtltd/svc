@@ -24,16 +24,23 @@ class Frontend extends ApiFrontend {
 
         $this->add('jUI');
         
-        $frontend_user = $this->add('Model_User')
-                        ->addCondition('type','Frontend');
+        $frontend_user = $this->add('Model_User');
 
-        $auth = $this->add('BasicAuth');
+        $auth = $this->add('BasicAuth',['login_layout_class'=>'Layout_Empty']);
         $auth->allowPage(array('index'));
-        $auth->setModel($frontend_user,'name','password');
-        
-        $this->add('Layout_Empty');
+        $auth->setModel($frontend_user,'username','password');
+        // $auth->allow(["demo",'demo']);
 
+        if(!$auth->isLoggedIn())
+            $this->add('Layout_Empty');
+        else{
+            $this->add('Layout_User');
+            $user_menu = $this->layout->add('Menu',['swatch'=>'red'],'Top_Menu');
+            $user_menu->addMenuItem('dashboard','Home');
+            $user_menu->addMenuItem('logout','Logout');
+        }
         $auth->check();
+
         //$footer=$l->addFooter();
         //$header=$l->addHeader();
         // $this->add('Layout_Centered');
