@@ -47,7 +47,7 @@ header#home
           span.icon-bar
         a.navbar-brand(href='index.html')
           h1
-            img.img-responsive(src='images/logo.png', alt='logo')
+            img.img-responsive(src='images/header-logo.png', alt='SVC' style='color:white')
       .collapse.navbar-collapse
         ul.nav.navbar-nav.navbar-right
           li.scroll.active
@@ -56,16 +56,16 @@ header#home
             a(href='#intro') Intro
           li.scroll
             a(href='#about-us') About Us
-          li.scroll
-            a(href='#services') Service
-          li.scroll
-            a(href='#portfolio') Portfolio
-          li.scroll
-            a(href='#team') Team
-          li.scroll
-            a(href='#blog') Blog
-          li.scroll
-            a(href='#contact') Contact
+          //- li.scroll
+          //-   a(href='#services') Service
+          //- li.scroll
+          //-   a(href='#portfolio') Portfolio
+          //- li.scroll
+          //-   a(href='#team') Team
+          //- li.scroll
+          //-   a(href='#blog') Blog
+          //- li.scroll
+          //-   a(href='#contact') Contact
   // /#main-nav
 // /#home
 //Intro
@@ -153,340 +153,293 @@ section#services
     .text-center.our-services
       .row
         .col-sm-6.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='300ms')
-          .service-icon
-            i.fa.fa-flask
-          .service-info
-            h3 India
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            div#svc-india-map
+          div#svc-india-map
         .col-sm-6.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='450ms')
-          .service-icon
-            i.fa.fa-umbrella
-          .service-info
-            h3 Creative Idea
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
-        
+          .row
+            .col-sm-6.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='300ms')
+              div#svc-india-statentop1
+            .col-sm-6.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='300ms')
+              div#svc-india-statentop2
+          .row
+            .col-sm-6.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='300ms')
+              div#svc-india-statentop3
+            .col-sm-6.wow.fadeInDown(data-wow-duration='1000ms', data-wow-delay='300ms')
+              div#svc-india-statentop4
 // /#services
-
+//Out Topers
 section#portfolio
   .container
     .row
       .heading.text-center.col-sm-8.col-sm-offset-2.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='300ms')
-        h2 Our Portfolio
+        h2 Meet Topers
         p
           | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam
-  .container-fluid
     .row
-      .col-sm-3
-        .folio-item.wow.fadeInRightBig(data-wow-duration='1000ms', data-wow-delay='300ms')
-          .folio-image
-            img.img-responsive(src='images/portfolio/1.jpg', alt='')
-          .overlay
-            .overlay-content
-              .overlay-text
-                .folio-info
-                  h3 Time Hours
-                  p Design, Photography
-                .folio-overview
-                  span.folio-link
-                    a.folio-read-more(href='#', data-single_url='portfolio-single.html')
-                      i.fa.fa-link
-                  span.folio-expand
-                    a(href='images/portfolio/portfolio-details.jpg', data-lightbox='portfolio')
-                      i.fa.fa-search-plus
-      .col-sm-3
-        .folio-item.wow.fadeInLeftBig(data-wow-duration='1000ms', data-wow-delay='400ms')
-          .folio-image
-            img.img-responsive(src='images/portfolio/2.jpg', alt='')
-          .overlay
-            .overlay-content
-              .overlay-text
-                .folio-info
-                  h3 Time Hours
-                  p Design, Photography
-                .folio-overview
-                  span.folio-link
-                    a.folio-read-more(href='#', data-single_url='portfolio-single.html')
-                      i.fa.fa-link
-                  span.folio-expand
-                    a(href='images/portfolio/portfolio-details.jpg', data-lightbox='portfolio')
-                      i.fa.fa-search-plus
-      .col-sm-3
-        .folio-item.wow.fadeInRightBig(data-wow-duration='1000ms', data-wow-delay='500ms')
-          .folio-image
-            img.img-responsive(src='images/portfolio/3.jpg', alt='')
-          .overlay
-            .overlay-content
-              .overlay-text
-                .folio-info
-                  h3 Time Hours
-                  p Design, Photography
-                .folio-overview
-                  span.folio-link
-                    a.folio-read-more(href='#', data-single_url='portfolio-single.html')
-                      i.fa.fa-link
-                  span.folio-expand
-                    a(href='images/portfolio/portfolio-details.jpg', data-lightbox='portfolio')
-                      i.fa.fa-search-plus
-      .col-sm-3
-        .folio-item.wow.fadeInLeftBig(data-wow-duration='1000ms', data-wow-delay='600ms')
-          .folio-image
-            img.img-responsive(src='images/portfolio/4.jpg', alt='')
-          .overlay
-            .overlay-content
-              .overlay-text
-                .folio-info
-                  h3 Time Hours
-                  p Design, Photography
-                .folio-overview
-                  span.folio-link
-                    a.folio-read-more(href='#', data-single_url='portfolio-single.html')
-                      i.fa.fa-link
-                  span.folio-expand
-                    a(href='images/portfolio/portfolio-details.jpg', data-lightbox='portfolio')
-                      i.fa.fa-search-plus
-      .col-sm-3
-        .folio-item.wow.fadeInRightBig(data-wow-duration='1000ms', data-wow-delay='700ms')
-          .folio-image
-            img.img-responsive(src='images/portfolio/5.jpg', alt='')
-          .overlay
-            .overlay-content
-              .overlay-text
-                .folio-info
-                  h3 Time Hours
-                  p Design, Photography
-                .folio-overview
-                  span.folio-link
-                    a.folio-read-more(href='#', data-single_url='portfolio-single.html')
-                      i.fa.fa-link
-                  span.folio-expand
-                    a(href='images/portfolio/portfolio-details.jpg', data-lightbox='portfolio')
-                      i.fa.fa-search-plus
-      .col-sm-3
-        .folio-item.wow.fadeInLeftBig(data-wow-duration='1000ms', data-wow-delay='800ms')
-          .folio-image
-            img.img-responsive(src='images/portfolio/6.jpg', alt='')
-          .overlay
-            .overlay-content
-              .overlay-text
-                .folio-info
-                  h3 Time Hours
-                  p Design, Photography
-                .folio-overview
-                  span.folio-link
-                    a.folio-read-more(href='#', data-single_url='portfolio-single.html')
-                      i.fa.fa-link
-                  span.folio-expand
-                    a(href='images/portfolio/portfolio-details.jpg', data-lightbox='portfolio')
-                      i.fa.fa-search-plus
-      .col-sm-3
-        .folio-item.wow.fadeInRightBig(data-wow-duration='1000ms', data-wow-delay='900ms')
-          .folio-image
-            img.img-responsive(src='images/portfolio/7.jpg', alt='')
-          .overlay
-            .overlay-content
-              .overlay-text
-                .folio-info
-                  h3 Time Hours
-                  p Design, Photography
-                .folio-overview
-                  span.folio-link
-                    a.folio-read-more(href='#', data-single_url='portfolio-single.html')
-                      i.fa.fa-link
-                  span.folio-expand
-                    a(href='images/portfolio/portfolio-details.jpg', data-lightbox='portfolio')
-                      i.fa.fa-search-plus
-      .col-sm-3
-        .folio-item.wow.fadeInLeftBig(data-wow-duration='1000ms', data-wow-delay='1000ms')
-          .folio-image
-            img.img-responsive(src='images/portfolio/8.jpg', alt='')
-          .overlay
-            .overlay-content
-              .overlay-text
-                .folio-info
-                  h3 Time Hours
-                  p Design, Photography
-                .folio-overview
-                  span.folio-link
-                    a.folio-read-more(href='#', data-single_url='portfolio-single.html')
-                      i.fa.fa-link
-                  span.folio-expand
-                    a(href='images/portfolio/portfolio-details.jpg', data-lightbox='portfolio')
-                      i.fa.fa-search-plus
-  #portfolio-single-wrap
-    #portfolio-single
-  // /#portfolio-single-wrap
-// /#portfolio
-section#team
-  .container
-    .row
-      .heading.text-center.col-sm-8.col-sm-offset-2.wow.fadeInUp(data-wow-duration='1200ms', data-wow-delay='300ms')
-        h2 The Team
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam
-    .team-members
-      .row
-        .col-sm-3
-          .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='300ms')
-            .member-image
-              img.img-responsive(src='images/team/1.jpg', alt='')
-            .member-info
-              h3 Marian Dixon
-              h4 CEO & Founder
-              p Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-            .social-icons
-              ul
-                li
-                  a.facebook(href='#')
-                    i.fa.fa-facebook
-                li
-                  a.twitter(href='#')
-                    i.fa.fa-twitter
-                li
-                  a.linkedin(href='#')
-                    i.fa.fa-linkedin
-                li
-                  a.dribbble(href='#')
-                    i.fa.fa-dribbble
-                li
-                  a.rss(href='#')
-                    i.fa.fa-rss
-        .col-sm-3
-          .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='500ms')
-            .member-image
-              img.img-responsive(src='images/team/2.jpg', alt='')
-            .member-info
-              h3 Lawrence Lane
-              h4 UI/UX Designer
-              p Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-            .social-icons
-              ul
-                li
-                  a.facebook(href='#')
-                    i.fa.fa-facebook
-                li
-                  a.twitter(href='#')
-                    i.fa.fa-twitter
-                li
-                  a.linkedin(href='#')
-                    i.fa.fa-linkedin
-                li
-                  a.dribbble(href='#')
-                    i.fa.fa-dribbble
-                li
-                  a.rss(href='#')
-                    i.fa.fa-rss
-        .col-sm-3
-          .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='800ms')
-            .member-image
-              img.img-responsive(src='images/team/3.jpg', alt='')
-            .member-info
-              h3 Lois Clark
-              h4 Developer
-              p Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-            .social-icons
-              ul
-                li
-                  a.facebook(href='#')
-                    i.fa.fa-facebook
-                li
-                  a.twitter(href='#')
-                    i.fa.fa-twitter
-                li
-                  a.linkedin(href='#')
-                    i.fa.fa-linkedin
-                li
-                  a.dribbble(href='#')
-                    i.fa.fa-dribbble
-                li
-                  a.rss(href='#')
-                    i.fa.fa-rss
-        .col-sm-3
-          .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='1100ms')
-            .member-image
-              img.img-responsive(src='images/team/4.jpg', alt='')
-            .member-info
-              h3 Marian Dixon
-              h4 Support Manager
-              p Consectetur adipisicing elit, sed do eiusmod tempor incididunt
-            .social-icons
-              ul
-                li
-                  a.facebook(href='#')
-                    i.fa.fa-facebook
-                li
-                  a.twitter(href='#')
-                    i.fa.fa-twitter
-                li
-                  a.linkedin(href='#')
-                    i.fa.fa-linkedin
-                li
-                  a.dribbble(href='#')
-                    i.fa.fa-dribbble
-                li
-                  a.rss(href='#')
-                    i.fa.fa-rss
-// /#team
-section#pricing
-  .container
-    .row
-      .heading.text-center.col-sm-8.col-sm-offset-2.wow.fadeInUp(data-wow-duration='1200ms', data-wow-delay='300ms')
-        h2 Pricing Table
-        p
-          | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam
-    .pricing-table
-      .row
-        .col-sm-3
-          .single-table.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='300ms')
-            h3 Basic
-            .price
-              | $9
-              span /Month
-            ul
-              li Free Setup
-              li 10GB Storage
-              li 100GB Bandwith
-              li 5 Products
-            a.btn.btn-lg.btn-primary(href='#') Sign up
-        .col-sm-3
-          .single-table.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='500ms')
-            h3 Standard
-            .price
-              | $19
-              span /Month
-            ul
-              li Free Setup
-              li 10GB Storage
-              li 100GB Bandwith
-              li 5 Products
-            a.btn.btn-lg.btn-primary(href='#') Sign up
-        .col-sm-3
-          .single-table.featured.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='800ms')
-            h3 Featured
-            .price
-              | $29
-              span /Month
-            ul
-              li Free Setup
-              li 10GB Storage
-              li 100GB Bandwith
-              li 5 Products
-            a.btn.btn-lg.btn-primary(href='#') Sign up
-        .col-sm-3
-          .single-table.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='1100ms')
-            h3 Professional
-            .price
-              | $49
-              span /Month
-            ul
-              li Free Setup
-              li 10GB Storage
-              li 100GB Bandwith
-              li 5 Products
-            a.btn.btn-lg.btn-primary(href='#') Sign up
-// /#pricing
+      .heading.text-center.col-sm-12.col-sm-offset-0.svc-tabs.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='300ms')
+        ul.nav.nav-tabs(role="tablist")
+          li.active(role="presentation")
+            a(href="#day" aria-controls="home" role="tab" data-toggle="tab") Day
+          li(role="presentation")
+            a(href="#week" aria-controls="profile" role="tab" data-toggle="tab") Week
+          li(role="presentation")
+            a(href="#month" aria-controls="profile" role="tab" data-toggle="tab") Month
+          li(role="Year")
+            a(href="#year" aria-controls="profile" role="tab" data-toggle="tab") Year
+          li(role="Overall")
+            a(href="#overall" aria-controls="profile" role="tab" data-toggle="tab") Overall
+        .tab-content
+          .tab-pane.active#day(role="tabpanel")
+            ol.breadcrumb
+              li
+                a(href="#") Rajasthan
+              li
+                a(href="#") Udaipur
+              li.active Data
+              li.pull-right
+                i.glyphicon.glyphicon-filter
+                a(href="#svc-filter") filter
+
+            div#svc-filter
+              button.close(type="button") ×
+              form#svc-toper-filter-form
+                input(type="filter" value="" placeholder="type keyword(s) here")
+                button.btn.btn-primary(type="submit") filter
+            .team-members
+              .row
+                .col-sm-2
+                  .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='300ms')
+                    .member-image
+                      img.img-responsive(src='images/team/1.jpg', alt='')
+                    .member-info
+                      h3 Marian Dixon
+                      h4 CEO & Founder
+                      p Consectetur adipisicing 
+                    .social-icons
+                      ul
+                        li
+                          a.facebook(href='#')
+                            i.fa.fa-facebook
+                        li
+                          a.twitter(href='#')
+                            i.fa.fa-twitter
+                        li
+                          a.linkedin(href='#')
+                            i.fa.fa-linkedin
+                .col-sm-2
+                  .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='500ms')
+                    .member-image
+                      img.img-responsive(src='images/team/2.jpg', alt='')
+                    .member-info
+                      h3 Lawrence Lane
+                      h4 UI/UX Designer
+                      p Consectetur adipisicing 
+                    .social-icons
+                      ul
+                        li
+                          a.facebook(href='#')
+                            i.fa.fa-facebook
+                        li
+                          a.twitter(href='#')
+                            i.fa.fa-twitter
+                        li
+                          a.linkedin(href='#')
+                            i.fa.fa-linkedin
+                .col-sm-2
+                  .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='800ms')
+                    .member-image
+                      img.img-responsive(src='images/team/3.jpg', alt='')
+                    .member-info
+                      h3 Lois Clark
+                      h4 Developer
+                      p Consectetur adipisicing 
+                    .social-icons
+                      ul
+                        li
+                          a.facebook(href='#')
+                            i.fa.fa-facebook
+                        li
+                          a.twitter(href='#')
+                            i.fa.fa-twitter
+                        li
+                          a.linkedin(href='#')
+                            i.fa.fa-linkedin
+                .col-sm-2
+                  .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='1100ms')
+                    .member-image
+                      img.img-responsive(src='images/team/4.jpg', alt='')
+                    .member-info
+                      h3 Marian Dixon
+                      h4 Support Manager
+                      p Consectetur adipisicing 
+                    .social-icons
+                      ul
+                        li
+                          a.facebook(href='#')
+                            i.fa.fa-facebook
+                        li
+                          a.twitter(href='#')
+                            i.fa.fa-twitter
+                        li
+                          a.linkedin(href='#')
+                            i.fa.fa-linkedin
+                .col-sm-2
+                  .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='1100ms')
+                    .member-image
+                      img.img-responsive(src='images/team/5.jpg', alt='')
+                    .member-info
+                      h3 Marian Dixon
+                      h4 Support Manager
+                      p Consectetur adipisicing 
+                    .social-icons
+                      ul
+                        li
+                          a.facebook(href='#')
+                            i.fa.fa-facebook
+                        li
+                          a.twitter(href='#')
+                            i.fa.fa-twitter
+                        li
+                          a.linkedin(href='#')
+                            i.fa.fa-linkedin
+                .col-sm-2
+                  .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='1100ms')
+                    .member-image
+                      img.img-responsive(src='images/team/6.jpg', alt='')
+                    .member-info
+                      h3 Marian Dixon
+                      h4 Support Manager
+                      p Consectetur adipisicing 
+                    .social-icons
+                      ul
+                        li
+                          a.facebook(href='#')
+                            i.fa.fa-facebook
+                        li
+                          a.twitter(href='#')
+                            i.fa.fa-twitter
+                        li
+                          a.linkedin(href='#')
+                            i.fa.fa-linkedin
+              .row
+                .col-sm-2
+                  .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='300ms')
+                    .member-image
+                      img.img-responsive(src='images/team/1.jpg', alt='')
+                    .member-info
+                      h3 Marian Dixon
+                      h4 CEO & Founder
+                      p Consectetur adipisicing 
+                    .social-icons
+                      ul
+                        li
+                          a.facebook(href='#')
+                            i.fa.fa-facebook
+                        li
+                          a.twitter(href='#')
+                            i.fa.fa-twitter
+                        li
+                          a.linkedin(href='#')
+                            i.fa.fa-linkedin
+                .col-sm-2
+                  .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='500ms')
+                    .member-image
+                      img.img-responsive(src='images/team/2.jpg', alt='')
+                    .member-info
+                      h3 Lawrence Lane
+                      h4 UI/UX Designer
+                      p Consectetur adipisicing 
+                    .social-icons
+                      ul
+                        li
+                          a.facebook(href='#')
+                            i.fa.fa-facebook
+                        li
+                          a.twitter(href='#')
+                            i.fa.fa-twitter
+                        li
+                          a.linkedin(href='#')
+                            i.fa.fa-linkedin
+                .col-sm-2
+                  .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='800ms')
+                    .member-image
+                      img.img-responsive(src='images/team/3.jpg', alt='')
+                    .member-info
+                      h3 Lois Clark
+                      h4 Developer
+                      p Consectetur adipisicing 
+                    .social-icons
+                      ul
+                        li
+                          a.facebook(href='#')
+                            i.fa.fa-facebook
+                        li
+                          a.twitter(href='#')
+                            i.fa.fa-twitter
+                        li
+                          a.linkedin(href='#')
+                            i.fa.fa-linkedin
+                .col-sm-2
+                  .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='1100ms')
+                    .member-image
+                      img.img-responsive(src='images/team/4.jpg', alt='')
+                    .member-info
+                      h3 Marian Dixon
+                      h4 Support Manager
+                      p Consectetur adipisicing 
+                    .social-icons
+                      ul
+                        li
+                          a.facebook(href='#')
+                            i.fa.fa-facebook
+                        li
+                          a.twitter(href='#')
+                            i.fa.fa-twitter
+                        li
+                          a.linkedin(href='#')
+                            i.fa.fa-linkedin
+                .col-sm-2
+                  .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='1100ms')
+                    .member-image
+                      img.img-responsive(src='images/team/5.jpg', alt='')
+                    .member-info
+                      h3 Marian Dixon
+                      h4 Support Manager
+                      p Consectetur adipisicing 
+                    .social-icons
+                      ul
+                        li
+                          a.facebook(href='#')
+                            i.fa.fa-facebook
+                        li
+                          a.twitter(href='#')
+                            i.fa.fa-twitter
+                        li
+                          a.linkedin(href='#')
+                            i.fa.fa-linkedin
+                .col-sm-2
+                  .team-member.wow.flipInY(data-wow-duration='1000ms', data-wow-delay='1100ms')
+                    .member-image
+                      img.img-responsive(src='images/team/6.jpg', alt='')
+                    .member-info
+                      h3 Marian Dixon
+                      h4 Support Manager
+                      p Consectetur adipisicing 
+                    .social-icons
+                      ul
+                        li
+                          a.facebook(href='#')
+                            i.fa.fa-facebook
+                        li
+                          a.twitter(href='#')
+                            i.fa.fa-twitter
+                        li
+                          a.linkedin(href='#')
+                            i.fa.fa-linkedin
+          .tab-pane#week(role="tabpanel") Week Topers Photo
+          .tab-pane#month(role="tabpanel") Month Topers Photo
+          .tab-pane#year(role="tabpanel") Year Topers Photo
+          .tab-pane#overall(role="tabpanel") Over all Topers Photo
+//Our Topers
 section#twitter.parallax
   div
     a.twitter-left-control(href='#twitter-carousel', role='button', data-slide='prev')
@@ -498,7 +451,7 @@ section#twitter.parallax
         .col-sm-8.col-sm-offset-2
           .twitter-icon.text-center
             i.fa.fa-twitter
-            h4 Themeum
+            h4 SVC
           #twitter-carousel.carousel.slide(data-ride='carousel')
             .carousel-inner
               .item.active.wow.fadeIn(data-wow-duration='1000ms', data-wow-delay='300ms')
@@ -621,7 +574,6 @@ section#blog
           |  Load More
 // /#blog
 section#contact
-  #google-map.wow.fadeIn(data-latitude='52.365629', data-longitude='4.871331', data-wow-duration='1000ms', data-wow-delay='400ms')
   #contact-us.parallax
     .container
       .row
@@ -662,7 +614,7 @@ section#contact
                 li
                   i.fa.fa-envelope
                   span  Email:
-                  a(href='mailto:someone@yoursite.com')  support@oxygen.com
+                  a(href='mailto:someone@yoursite.com')  support@svc.com
                 li
                   i.fa.fa-globe
                   span  Website:
@@ -673,7 +625,7 @@ footer#footer
     .container.text-center
       .footer-logo
         a(href='index.html')
-          img.img-responsive(src='images/logo.png', alt='')
+          img.img-responsive(src='images/footer-logo.png', alt='SVC' style="color:white;")
       .social-icons
         ul
           li
