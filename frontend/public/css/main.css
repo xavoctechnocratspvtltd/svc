@@ -340,7 +340,7 @@ section {
 
 #features .points{
   margin-top:20px;
-  font-size:40px;
+  font-size:90px;
 }
 
 
@@ -985,5 +985,13 @@ ul.address {
 }
 
 /*Presets*/
+/*Rakesh*/
+.svc-margintop{
+  margin-top: 50px;
+}
+
+.svc-bvg-piechart{
+  width: 100%;
+}
 
 
