@@ -584,28 +584,30 @@ section#contact
       .contact-form.wow.fadeIn(data-wow-duration='1000ms', data-wow-delay='600ms')
         .row
           .col-sm-6
-            {svcform}
-            .atk-swatch-red Atk Form
-            .atk-form(style="{$style}" class="{$class}" id="{$_name}")
-              <form class="{$form_class}" action="{$form_action}" method="{form_method}post{/}" {$enctype} {$attributes} >
-              {Content}
-              {form_line}
-              .atk-cell
+            {registration_form}
+            form.atk-form#main-contact-form
+              .atk-push
                 .atk-push-xsmall
-                  label.atk-text-bold Name
-                .atk-form-row.atk-form-field
-                  {$name}
-              {/}
-              {/}
-              {button_row}
-              .atk-cells.atk-cells-gutter-large
+                  label.atk-text-bold Preferred Country
+                .atk-form-row.atk-form-field.form-control {$location_id}
+              .atk-push
+                .atk-push-xsmall
+                  label.atk-text-bold Contact name
+                .atk-form-row.atk-form-field {$contact_name}
+              .atk-cells.atk-cells-justified.atk-cells-gutter.atk-push
                 .atk-cell
-                  .atk-cell.atk-actions(class="{$buttons_class}")
-                    {$form_buttons}
-              {/button_row}
-              </form>
-            {/svcform}
-
+                  .atk-push-xsmall
+                    label.atk-text-bold Email
+                  .atk-form-row.atk-form-field {$contact_email}
+                .atk-cell
+                  .atk-push-xsmall
+                    label.atk-text-bold Phone
+                  .atk-form-row.atk-form-field
+                    .input-dropdown#input-combo-phone
+                      .atk-input-combo.atk-cells
+                        .atk-cell#input-phone {$phone_countries}
+                        .atk-cell.atk-expand {$phone}
+            {/}
             form#main-contact-form(name='contact-form', method='post', action='#')
               .row.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='300ms')
                 .col-sm-6

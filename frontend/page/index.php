@@ -29,8 +29,9 @@ class page_index extends Page{
         $this->js(true)->_load('svc');
 
 
-        $form = $this->add('Form',null,'svcform',['page/home','svcform']);
-        $form->addField('line','name','name');
+        $form = $this->add('Form',null,'registration_form');
+        $form->setLayout(['page/home','registration_form']);
+        $form->addField('line','contact_name','name')->set("Hello");
         // $hospital_images = $this->add('CompleteLister',null,'hospital_photos',array('page/hospital','hospital_photos'));
         
     }
