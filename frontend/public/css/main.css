@@ -1124,3 +1124,18 @@ ul.address {
 .svc-tabs .team-members .row{
   margin-top: 20px;
 }
+
+.svc-form-message textarea{
+  background:none ;
+}
+
+.btn-submit button,.btn-submit button:hover{
+  background:none;
+  border:0px;
+  box-shadow:none;
+  color:white;  
+}
+
+.svc-registration-form input{
+  color:#028fcc !important;
+}

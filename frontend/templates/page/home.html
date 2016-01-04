@@ -495,19 +495,21 @@
       </div>
       <div data-wow-duration="1000ms" data-wow-delay="600ms" class="contact-form wow fadeIn">
         <div class="row">
-          <div class="col-sm-6">{registration_form}
-            <form id="main-contact-form" class="atk-form">
-              <div class="atk-push">
-                <div class="atk-push-xsmall">
-                  <label class="atk-text-bold">Preferred Country</label>
+          <div class="col-sm-6 svc-registration-form">{registration_form}
+            <form data-wow-duration="1000ms" data-wow-delay="300ms" id="main-contact-form" class="atk-form wow fadeInUp">
+              <div class="atk-push atk-cells atk-cells-justified atk-cells-gutter">
+                <div class="atk-cell">
+                  <div class="atk-push-xsmall">
+                    <label class="atk-text-bold">Preferred Country</label>
+                  </div>
+                  <div class="atk-form-row atk-form-field">{$location_id}</div>
                 </div>
-                <div class="atk-form-row atk-form-field form-control">{$location_id}</div>
-              </div>
-              <div class="atk-push">
-                <div class="atk-push-xsmall">
-                  <label class="atk-text-bold">Contact name</label>
+                <div class="atk-cell">
+                  <div class="atk-push-xsmall">
+                    <label class="atk-text-bold">Contact name</label>
+                  </div>
+                  <div class="atk-form-row atk-form-field">{$contact_name}</div>
                 </div>
-                <div class="atk-form-row atk-form-field">{$contact_name}</div>
               </div>
               <div class="atk-cells atk-cells-justified atk-cells-gutter atk-push">
                 <div class="atk-cell">
@@ -530,30 +532,17 @@
                   </div>
                 </div>
               </div>
+              <div class="atk-form-row atk-form-row-text"> 
+                <div class="atk-push-xsmall atk-form-label atk-text-nowrap">
+                  <label class="atk-text-bold">Message</label>
+                </div>
+                <div class="atk-form-field atk-push-small svc-form-message"> {$message}</div>
+              </div>
+              <div class="atk-form-row atk-form-row-text btn-submit">
+                 
+                {$FormButtons}
+              </div>
             </form>{/}
-            <form id="main-contact-form" name="contact-form" method="post" action="#">
-              <div data-wow-duration="1000ms" data-wow-delay="300ms" class="row wow fadeInUp">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <input type="text" name="name" placeholder="Name" required="required" class="form-control"/>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <input type="email" name="email" placeholder="Email Address" required="required" class="form-control"/>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" name="subject" placeholder="Subject" required="required" class="form-control"/>
-              </div>
-              <div class="form-group">
-                <textarea id="message" name="message" rows="4" placeholder="Enter your message" required="required" class="form-control"></textarea>
-              </div>
-              <div class="form-group">
-                <button type="submit" class="btn-submit">Send Now</button>
-              </div>
-            </form>
           </div>
           <div class="col-sm-6">
             <div data-wow-duration="1000ms" data-wow-delay="300ms" class="contact-info wow fadeInUp">

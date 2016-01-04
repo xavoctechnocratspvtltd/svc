@@ -29,11 +29,20 @@ class page_index extends Page{
         $this->js(true)->_load('svc');
 
 
-        $form = $this->add('Form',null,'registration_form');
+        $form = $this->add('Form',null,'registration_form',['form/stacked']);
         $form->setLayout(['page/home','registration_form']);
-        $form->addField('line','contact_name','name')->set("Hello");
+        $form->addField('line','contact_name','name');
+        $form->addField('line','location_id','location');
+        $form->addField('line','contact_email','email');
+        $form->addField('Dropdown','phone_countries')->setValueList(['+91','+01']);
+        $form->addField('line','phone');
+        $form->addField('text','message');
+        $form->addSubmit('Send Now')->addClass('atk-col');
+        if($form->isSubmitted()){
+            $form->js()->univ()->successMessage('Form Submission Handle Due')->execute();
+        }
+
         // $hospital_images = $this->add('CompleteLister',null,'hospital_photos',array('page/hospital','hospital_photos'));
-        
     }
 
     function defaultTemplate(){
