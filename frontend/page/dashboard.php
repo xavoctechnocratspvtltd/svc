@@ -7,5 +7,10 @@ class page_dashboard extends Page{
 
 		$this->api->title = "Dashboard";
 
+		// $this->add('View_Info')->set('Hello');
 	}
+
+	function defaultTemplate(){
+    	return ['page/dashboard'];
+    }
 }
