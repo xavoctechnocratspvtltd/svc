@@ -61,7 +61,17 @@ class page_index extends Page{
             return $f->js()->univ()->dialogOK("Hi",'Just check your email to confirm email account');
 
         });
-        // $hospital_images = $this->add('CompleteLister',null,'hospital_photos',array('page/hospital','hospital_photos'));
+
+
+        $blog_lister = $this->add('CompleteLister',null,'svc_blog',array('page/home','svc_blog'));
+        
+        $blog_model = $this->add('Model_Blog');
+
+        $blog_lister->setModel($blog_model);
+        $blog_lister->addHook('formatRow',function($l){
+            if(!$l->current_row['image'])
+                $l->current_row['image'] = "images/blog/1.jpg";
+        });
     }
 
     function defaultTemplate(){

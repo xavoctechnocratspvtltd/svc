@@ -502,98 +502,35 @@ section#blog
         h2 Blog Posts
         p
           | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam
+    {svc_blog}
     .blog-posts
-      .row
+      .row{rows}{row}
         .col-sm-4.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='400ms')
           .post-thumb
             a(href='#')
-              img.img-responsive(src='images/blog/1.jpg', alt='')
+              img.img-responsive(src='{image}images/blog/1.jpg{/}', alt='')
             .post-meta
               span
                 i.fa.fa-comments-o
-                |  3 Comments
+                |  {comments}3 {/comments} Comments
               span
                 i.fa.fa-heart
-                |  0 Likes
-            .post-icon
-              i.fa.fa-pencil
-          .entry-header
-            h3
-              a(href='#') Lorem ipsum dolor sit amet consectetur adipisicing elit
-            span.date June 26, 2014
-            span.cetagory
-              | in 
-              strong Photography
-          .entry-content
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .col-sm-4.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='600ms')
-          .post-thumb
-            #post-carousel.carousel.slide(data-ride='carousel')
-              ol.carousel-indicators
-                li.active(data-target='#post-carousel', data-slide-to='0')
-                li(data-target='#post-carousel', data-slide-to='1')
-                li(data-target='#post-carousel', data-slide-to='2')
-              .carousel-inner
-                .item.active
-                  a(href='#')
-                    img.img-responsive(src='images/blog/2.jpg', alt='')
-                .item
-                  a(href='#')
-                    img.img-responsive(src='images/blog/1.jpg', alt='')
-                .item
-                  a(href='#')
-                    img.img-responsive(src='images/blog/3.jpg', alt='')
-              a.blog-left-control(href='#post-carousel', role='button', data-slide='prev')
-                i.fa.fa-angle-left
-              a.blog-right-control(href='#post-carousel', role='button', data-slide='next')
-                i.fa.fa-angle-right
-            .post-meta
-              span
-                i.fa.fa-comments-o
-                |  3 Comments
-              span
-                i.fa.fa-heart
-                |  0 Likes
+                |  {likes} 0 {/likes} Likes
             .post-icon
               i.fa.fa-picture-o
           .entry-header
             h3
-              a(href='#') Lorem ipsum dolor sit amet consectetur adipisicing elit
-            span.date June 26, 2014
+              a(href='#') {subject}Lorem ipsum dolor sit amet consectetur adipisicing elit{/subject}
+            span.date {created_at}June 26, 2014{/created_at}
             span.cetagory
               | in 
               strong Photography
           .entry-content
             p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        .col-sm-4.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='800ms')
-          .post-thumb
-            a(href='#')
-              img.img-responsive(src='images/blog/3.jpg', alt='')
-            .post-meta
-              span
-                i.fa.fa-comments-o
-                |  3 Comments
-              span
-                i.fa.fa-heart
-                |  0 Likes
-            .post-icon
-              i.fa.fa-video-camera
-          .entry-header
-            h3
-              a(href='#') Lorem ipsum dolor sit amet consectetur adipisicing elit
-            span.date June 26, 2014
-            span.cetagory
-              | in 
-              strong Photography
-          .entry-content
-            p
-              | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      .load-more.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='500ms')
-        a.btn-loadmore(href='#')
-          i.fa.fa-repeat
-          |  Load More
+              {content}Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.{/}
+        {/}
+        {/}
+  {/svc_blog}
 // /#blog
 section#joinus
   #contact-us.parallax
