@@ -41,8 +41,9 @@ class page_index extends Page{
         });
 
 
-        $form = $this->add('Form',null,'registration_form');
+        $form = $this->add('Form',null,'registration_form',['form/stacked']);
         $form->setLayout(['page/home','registration_form']);
+
         $form->setModel('User',['name','surname','email','password']);
         $form->addField('Password','re_password');
         $form->addField('Checkbox','terms','I Agree terms and condition');
@@ -61,7 +62,6 @@ class page_index extends Page{
 
         });
         // $hospital_images = $this->add('CompleteLister',null,'hospital_photos',array('page/hospital','hospital_photos'));
-        
     }
 
     function defaultTemplate(){
