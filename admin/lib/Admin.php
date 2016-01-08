@@ -48,7 +48,8 @@ class Admin extends App_Admin {
         // $setting_menu->addMenuItem($this->api->url('setting/logManagement',array('client_id'=>$_GET['client_id'])),'Log Management');
 
         //Logout
-        $m->addMenuItem('logout','Logout')->addClass('atk-swatch-red');
+        $m->addMenuItem('blogs','Blogs');
+        $m->addMenuItem('logout','Logout');
 
     }
 }
