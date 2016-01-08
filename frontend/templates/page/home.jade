@@ -40,42 +40,58 @@ header#home
   .main-nav
     .container
       .navbar-header
-        button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+        button.navbar-toggle(data-target='.navbar-collapse', data-toggle='collapse', type='button')
           span.sr-only Toggle navigation
           span.icon-bar
           span.icon-bar
           span.icon-bar
         a.navbar-brand(href='index.html')
           h1
-            img.img-responsive(src='images/header-logo.png', alt='SVC' style='color:white')
-        .collapse.navbar-collapse
-          {login}
-          form.navbar-form.navbar-left
-            .form-group
-              {$email}{$password}{$FormButtons}
-          {/login}
+            img.img-responsive(alt='logo', src='images/logo.png')
       .collapse.navbar-collapse
-        ul.nav.navavbar-nav.navbar-right
+        ul.nav.navbar-nav.navbar-right
           li.scroll.active
             a(href='#home') Home
           li.scroll
-            a(href='#intro') Intro
+            a(href='#aboutus') About Us
           li.scroll
-            a(href='#about-us') About Us
-          //- li.scroll
-          //-   a(href='#services') Service
-          //- li.scroll
-          //-   a(href='#portfolio') Portfolio
-          //- li.scroll
-          //-   a(href='#team') Team
-          //- li.scroll
-          //-   a(href='#blog') Blog
-          //- li.scroll
-          //-   a(href='#contact') Contact
-  // /#main-nav
-// /#home
+            a(href='#statistics') Statistics
+          li.scroll
+            a(href='#toppers') Toppers
+          li.scroll
+            a(href='#blog') Blog
+          li.scroll
+            a(href='#joinus') Join Us
+          li
+            a.btn.btn-success(data-toggle="modal" data-target="#svcsignin") Sign in
+          #svcsignin.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel')
+            .modal-dialog(role='document')
+              .modal-content
+                .modal-header
+                  button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+                  h4#myModalLabel.modal-title Sign in
+                .modal-body
+                  .row
+                    .col-md-8
+                      {login}
+                      .form.navbar-form.navbar-left
+                        .form-group(style="width:100%")
+                          label.control-label User Name
+                          {$email}
+                        .form-group(style="width:100%")
+                          label.control-label Password
+                          {$password}
+                        .form-group(style="width:100%;margin-top:10px;")
+                          {$FormButtons}
+                      {/login}
+                    .col-md-4.text-center
+                      p Sign in with
+                      .btn.btn-block.btn-info Facebook
+                      |or
+                      .btn.btn-block.btn-danger Google
 //Intro
-section#intro
+section#aboutus
   .container
     .row
       .col-sm-4
@@ -115,7 +131,7 @@ section#features.parallax
       //-   h3 24/7
       //-   p Fast Support
 // /#features
-section#about-us
+section#statistics
   .container
     .row
       .text-center.col-sm-8.col-sm-offset-2
@@ -173,7 +189,7 @@ section#services
               div#svc-india-statentop4
 // /#services
 //Out Topers
-section#portfolio
+section#toppers
   .container
     .row
       .heading.text-center.col-sm-8.col-sm-offset-2.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='300ms')
@@ -579,7 +595,7 @@ section#blog
           i.fa.fa-repeat
           |  Load More
 // /#blog
-section#contact
+section#joinus
   #contact-us.parallax
     .container
       .row

@@ -29,28 +29,55 @@
   <div class="main-nav">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand">
-          <h1><img src="images/header-logo.png" alt="SVC" style="color:white" class="img-responsive"/></h1></a>
-        <div class="collapse navbar-collapse">{login}
-          <form class="navbar-form navbar-left">
-            <div class="form-group">{$email}{$password}{$FormButtons}</div>
-          </form>{/login}
-        </div>
+        <button data-target=".navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand">
+          <h1><img alt="logo" src="images/logo.png" class="img-responsive"/></h1></a>
       </div>
       <div class="collapse navbar-collapse">
-        <ul class="nav navavbar-nav navbar-right">
+        <ul class="nav navbar-nav navbar-right">
           <li class="scroll active"><a href="#home">Home</a></li>
-          <li class="scroll"><a href="#intro">Intro</a></li>
-          <li class="scroll"><a href="#about-us">About Us</a></li>
+          <li class="scroll"><a href="#aboutus">About Us</a></li>
+          <li class="scroll"><a href="#statistics">Statistics</a></li>
+          <li class="scroll"><a href="#toppers">Toppers</a></li>
+          <li class="scroll"><a href="#blog">Blog</a></li>
+          <li class="scroll"><a href="#joinus">Join Us</a></li>
+          <li><a data-toggle="modal" data-target="#svcsignin" class="btn btn-success">Sign in</a></li>
+          <div id="svcsignin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+            <div role="document" class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                  <h4 id="myModalLabel" class="modal-title">Sign in</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-8">{login}
+                      <div class="form navbar-form navbar-left">
+                        <div style="width:100%" class="form-group">
+                          <label class="control-label">User Name</label>{$email}
+                        </div>
+                        <div style="width:100%" class="form-group">
+                          <label class="control-label">Password</label>{$password}
+                        </div>
+                        <div style="width:100%;margin-top:10px;" class="form-group">{$FormButtons}</div>
+                      </div>{/login}
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <p>Sign in with</p>
+                      <div class="btn btn-block btn-info">Facebook</div>or
+                      <div class="btn btn-block btn-danger">Google</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </ul>
       </div>
     </div>
   </div>
-  <!-- /#main-nav-->
 </header>
-<!-- /#home-->
 <!--Intro-->
-<section id="intro">
+<section id="aboutus">
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
@@ -83,7 +110,7 @@
   </div>
 </section>
 <!-- /#features-->
-<section id="about-us">
+<section id="statistics">
   <div class="container">
     <div class="row">
       <div class="text-center col-sm-8 col-sm-offset-2">
@@ -145,7 +172,7 @@
 </section>
 <!-- /#services-->
 <!--Out Topers-->
-<section id="portfolio">
+<section id="toppers">
   <div class="container">
     <div class="row">
       <div data-wow-duration="1000ms" data-wow-delay="300ms" class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp">
@@ -489,7 +516,7 @@
   </div>
 </section>
 <!-- /#blog-->
-<section id="contact">
+<section id="joinus">
   <div id="contact-us" class="parallax">
     <div class="container">
       <div class="row">
