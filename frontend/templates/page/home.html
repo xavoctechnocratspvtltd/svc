@@ -31,9 +31,14 @@
       <div class="navbar-header">
         <button type="button" data-toggle="collapse" data-target=".navbar-collapse" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand">
           <h1><img src="images/header-logo.png" alt="SVC" style="color:white" class="img-responsive"/></h1></a>
+        <div class="collapse navbar-collapse">{login}
+          <form class="navbar-form navbar-left">
+            <div class="form-group">{$email}{$password}{$FormButtons}</div>
+          </form>{/login}
+        </div>
       </div>
       <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
+        <ul class="nav navavbar-nav navbar-right">
           <li class="scroll active"><a href="#home">Home</a></li>
           <li class="scroll"><a href="#intro">Intro</a></li>
           <li class="scroll"><a href="#about-us">About Us</a></li>
@@ -489,75 +494,61 @@
     <div class="container">
       <div class="row">
         <div data-wow-duration="1000ms" data-wow-delay="300ms" class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp">
-          <h2>Contact Us</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+          <h2>Join Us</h2>
+          <p>LorOr just contact us if you need professional implementation of gmarks and SVC at your corporate.</p>
         </div>
-      </div>
-      <div data-wow-duration="1000ms" data-wow-delay="600ms" class="contact-form wow fadeIn">
         <div class="row">
           <div class="col-sm-6">{registration_form}
             <form id="main-contact-form" class="atk-form">
               <div class="atk-push">
                 <div class="atk-push-xsmall">
-                  <label class="atk-text-bold">Preferred Country</label>
+                  <label class="atk-text-bold">Name</label>
                 </div>
-                <div class="atk-form-row atk-form-field form-control">{$location_id}</div>
-              </div>
-              <div class="atk-push">
-                <div class="atk-push-xsmall">
-                  <label class="atk-text-bold">Contact name</label>
-                </div>
-                <div class="atk-form-row atk-form-field">{$contact_name}</div>
-              </div>
-              <div class="atk-cells atk-cells-justified atk-cells-gutter atk-push">
-                <div class="atk-cell">
-                  <div class="atk-push-xsmall">
-                    <label class="atk-text-bold">Email</label>
+                <div class="row atk-push-xsmall">
+                  <div class="col-sm-6">
+                    <div class="atk-form-row">
+                      <div class="atk-cell atk-form-field">{$name}</div>
+                    </div>
                   </div>
-                  <div class="atk-form-row atk-form-field">{$contact_email}</div>
-                </div>
-                <div class="atk-cell">
-                  <div class="atk-push-xsmall">
-                    <label class="atk-text-bold">Phone</label>
-                  </div>
-                  <div class="atk-form-row atk-form-field">
-                    <div id="input-combo-phone" class="input-dropdown">
-                      <div class="atk-input-combo atk-cells">
-                        <div id="input-phone" class="atk-cell">{$phone_countries}</div>
-                        <div class="atk-cell atk-expand">{$phone}</div>
-                      </div>
+                  <div class="col-sm-6">
+                    <div class="atk-form-row">
+                      <div class="atk-cell atk-expand">{$surname}</div>
                     </div>
                   </div>
                 </div>
+                <div class="atk-push-xsmall">
+                  <label class="atk-text-bold">Email (username)</label>
+                </div>
+                <div class="atk-form-row atk-push-xsmall">
+                  <div class="atk-cell atk-form-field">{$email}</div>
+                </div>
+                <div class="atk-push-xsmall">
+                  <label class="atk-text-bold">Password</label>
+                </div>
+                <div class="row atk-push-small">
+                  <div class="col-sm-6">
+                    <div class="atk-form-row">
+                      <div class="atk-cell atk-expand">{$password}</div>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="atk-form-row">
+                      <div class="atk-cell atk-expand">{$re_password}</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="atk-form-row">
+                  <div class="atk-cell atk-expand">{$terms}</div>
+                </div>
+                <div class="row">
+                  <div class="col-sm-6">{$FormButtons}</div>
+                </div>
               </div>
             </form>{/}
-            <form id="main-contact-form" name="contact-form" method="post" action="#">
-              <div data-wow-duration="1000ms" data-wow-delay="300ms" class="row wow fadeInUp">
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <input type="text" name="name" placeholder="Name" required="required" class="form-control"/>
-                  </div>
-                </div>
-                <div class="col-sm-6">
-                  <div class="form-group">
-                    <input type="email" name="email" placeholder="Email Address" required="required" class="form-control"/>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" name="subject" placeholder="Subject" required="required" class="form-control"/>
-              </div>
-              <div class="form-group">
-                <textarea id="message" name="message" rows="4" placeholder="Enter your message" required="required" class="form-control"></textarea>
-              </div>
-              <div class="form-group">
-                <button type="submit" class="btn-submit">Send Now</button>
-              </div>
-            </form>
           </div>
           <div class="col-sm-6">
             <div data-wow-duration="1000ms" data-wow-delay="300ms" class="contact-info wow fadeInUp">
-              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+              <p>Or just contact us if you need professional implementation of gmarks and SVC at your corporate.</p>
               <ul class="address">
                 <li><i class="fa fa-map-marker"></i><span> Address:</span> 2400 South Avenue A</li>
                 <li><i class="fa fa-phone"></i><span> Phone:</span> +928 336 2000</li>

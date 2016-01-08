@@ -28,16 +28,23 @@ class Frontend extends ApiFrontend {
 
         $auth = $this->add('BasicAuth',['login_layout_class'=>'Layout_Empty']);
         $auth->allowPage(array('index'));
-        $auth->setModel($frontend_user,'username','password');
+        $auth->setModel($frontend_user,'email','password');
         // $auth->allow(["demo",'demo']);
 
         if(!$auth->isLoggedIn())
             $this->add('Layout_Empty');
         else{
             $this->add('Layout_User');
-            $user_menu = $this->layout->add('Menu',['swatch'=>'red'],'Top_Menu');
+            $user_menu = $this->layout->add('Menu_Horizontal',null,'UserMenu');
             $user_menu->addMenuItem('dashboard','Home');
+            $user_menu->addMenuItem('dashboard','Profile');
+            $user_menu->addMenuItem('dashboard','Marksheet');
+            $user_menu->addMenuItem('dashboard','History');
             $user_menu->addMenuItem('logout','Logout');
+
+            $menu = $this->layout->add('Menu',null,'Top_Menu');
+            $menu->addMenuItem('company','Company(if owner)');
+
         }
         $auth->check();
 

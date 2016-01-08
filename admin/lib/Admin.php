@@ -13,13 +13,13 @@ class Admin extends App_Admin {
         $this->now = date('Y-m-d H:i:s',strtotime($this->recall('current_date',date('Y-m-d H:i:s'))));
 
 
-        $superadmin = $this->add('Model_User')
-                        ->addCondition('type','Backend');
+        $superadmin = $this->add('Model_User');
+                        // ->addCondition('type','Backend');
 
         // print_r($superadmin->getRows());
 
         $auth = $this->add('BasicAuth');
-        $auth->setModel($superadmin,'name','password');
+        $auth->setModel($superadmin,'email','password');
         $auth->check();
 
         $this->api->pathfinder
