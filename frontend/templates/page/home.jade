@@ -506,7 +506,7 @@ section#blog
     {svc_blog}
     .blog-posts
       .row{rows}{row}
-        .col-sm-4.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='400ms')
+        .col-sm-4.blog-post.wow.fadeInUp(data-wow-duration='1000ms', data-wow-delay='400ms')
           .post-thumb
             a(href='#')
               img.img-responsive(src='{image}images/blog/1.jpg{/}', alt='')
@@ -521,16 +521,24 @@ section#blog
               i.fa.fa-picture-o
           .entry-header
             h3
-              a(href='#') {subject}Lorem ipsum dolor sit amet consectetur adipisicing elit{/subject}
+              a(href='blogpost/?blogpost_id={$id}') {subject}Lorem ipsum dolor sit amet consectetur adipisicing elit{/subject}
             span.date {created_at}June 26, 2014{/created_at}
             span.cetagory
               | in 
-              strong Photography
+              strong {category}General{/}
           .entry-content
             p
               {content}Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.{/}
+          .entry-footer.atk-padding-top
+            p
+              a(href="blogpost/?blogpost_id={$id}") Read More...
         {/}
         {/}
+      {loadmore}
+      .load-more.wow.fadeInUp(data-wow-duration="1000ms", data-wow-delay="500ms")
+        a.btn-loadmore(href="blogs")
+          i.fa.fa-repeat  Load More
+      {/loadmore}
   {/svc_blog}
 // /#blog
 section#joinus

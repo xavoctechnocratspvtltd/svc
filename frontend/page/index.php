@@ -4,29 +4,7 @@ class page_index extends Page{
         parent::init();
 
         // $this->add('View_Registration');
-        $this->api->jui->addStaticStylesheet('bootstrap.min','.css');
-        $this->api->jui->addStaticStylesheet('animate.min','.css');
-        $this->api->jui->addStaticStylesheet('font-awesome.min','.css');
-        $this->api->jui->addStaticStylesheet('lightbox','.css');
-        $this->api->jui->addStaticStylesheet('main','.css');
-        $this->api->jui->addStaticStylesheet('responsive','.css');
-        $this->api->jui->addStaticStylesheet('presets/preset1','.css');
-
-        $this->api->jui->addStaticInclude('http://maps.google.com/maps/api/js?sensor=true','.css','.js');
-        $this->api->jui->addStaticInclude('highcharts','.js');
-        $this->api->jui->addStaticInclude('map','.js');
-        $this->api->jui->addStaticInclude('in-all','.js');
-
-        $this->js(true)->_load('bootstrap.min');
-        $this->js(true)->_load('wow.min');
-        $this->js(true)->_load('mousescroll');
-        $this->js(true)->_load('smoothscroll');
-        $this->js(true)->_load('jquery.countTo');
-        $this->js(true)->_load('lightbox.min');
-
-        $this->js(true)->_load('main');
-        $this->js(true)->_load('svc');
-
+        
         $form = $this->add('Form',null,'login');
         $form->setLayout(['page/home','login']);
         $form->addField('email');
@@ -63,15 +41,15 @@ class page_index extends Page{
         });
 
 
-        $blog_lister = $this->add('CompleteLister',null,'svc_blog',array('page/home','svc_blog'));
-        
+        $blog_lister = $this->add('View_Lister_Blog',null,'svc_blog');
+        $blog_lister->loadmore = true;
         $blog_model = $this->add('Model_Blog');
-
         $blog_lister->setModel($blog_model);
-        $blog_lister->addHook('formatRow',function($l){
-            if(!$l->current_row['image'])
-                $l->current_row['image'] = "images/blog/1.jpg";
-        });
+        // $blog_lister = $this->add('CompleteLister',null,'svc_blog',array('page/home','svc_blog'));
+        // $blog_lister->addHook('formatRow',function($l){
+        //     if(!$l->current_row['image'])
+        //         $l->current_row['image'] = "images/blog/1.jpg";
+        // });
     }
 
     function defaultTemplate(){

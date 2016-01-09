@@ -27,7 +27,7 @@ class Frontend extends ApiFrontend {
         $frontend_user = $this->add('Model_User');
 
         $auth = $this->add('BasicAuth',['login_layout_class'=>'Layout_Empty']);
-        $auth->allowPage(array('index'));
+        $auth->allowPage(array('index','blogs','blogpost'));
         $auth->setModel($frontend_user,'email','password');
         // $auth->allow(["demo",'demo']);
 

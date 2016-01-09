@@ -465,20 +465,24 @@
     </div>{svc_blog}
     <div class="blog-posts">
       <div class="row">{rows}{row}
-        <div data-wow-duration="1000ms" data-wow-delay="400ms" class="col-sm-4 wow fadeInUp">
+        <div data-wow-duration="1000ms" data-wow-delay="400ms" class="col-sm-4 blog-post wow fadeInUp">
           <div class="post-thumb"><a href="#"><img src="{image}images/blog/1.jpg{/}" alt="" class="img-responsive"/></a>
             <div class="post-meta"><span><i class="fa fa-comments-o"></i> {comments}3 {/comments} Comments</span><span><i class="fa fa-heart"></i> {likes} 0 {/likes} Likes</span></div>
             <div class="post-icon"><i class="fa fa-picture-o"></i></div>
           </div>
           <div class="entry-header">
-            <h3><a href="#">{subject}Lorem ipsum dolor sit amet consectetur adipisicing elit{/subject}</a></h3><span class="date">{created_at}June 26, 2014{/created_at}</span><span class="cetagory">in <strong>Photography</strong></span>
+            <h3><a href="blogpost/?blogpost_id={$id}">{subject}Lorem ipsum dolor sit amet consectetur adipisicing elit{/subject}</a></h3><span class="date">{created_at}June 26, 2014{/created_at}</span><span class="cetagory">in <strong>{category}General{/}</strong></span>
           </div>
           <div class="entry-content">
             <p>{content}Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.{/}</p>
           </div>
+          <div class="entry-footer atk-padding-top">
+            <p><a href="blogpost/?blogpost_id={$id}">Read More...</a></p>
+          </div>
         </div>{/}
         {/}
-      </div>
+      </div>{loadmore}
+      <div data-wow-duration="1000ms" data-wow-delay="500ms" class="load-more wow fadeInUp"><a href="blogs" class="btn-loadmore"><i class="fa fa-repeat"> Load More</i></a></div>{/loadmore}
     </div>
   </div>{/svc_blog}
 </section>

@@ -832,6 +832,11 @@ section {
 
 .entry-content {
   font-size: 14px;
+  overflow:hidden; 
+  display:inline-block;  
+  text-overflow: ellipsis; 
+  /*white-space: nowrap;*/
+  max-height: 150px;
 }
 
 .load-more {
@@ -851,6 +856,10 @@ section {
 
 .btn-loadmore:hover {
   color:#fff;
+}
+
+.blog-post{
+  height: 600px;
 }
 
 /*************************
@@ -1138,4 +1147,8 @@ ul.address {
 
 .svc-registration-form input{
   color:#028fcc !important;
+}
+
+.svc-blog-slide-item{
+  height:350px !important;
 }

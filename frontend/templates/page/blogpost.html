@@ -1,0 +1,108 @@
+
+<!-- .preloader-->
+<div class="preloader"><i class="fa fa-circle-o-notch fa-spin"></i></div>
+<!-- /.preloader-->
+<header id="bloghome">
+  <div class="main-nav">
+    <div class="container">
+      <div class="navbar-header">
+        <button data-target=".navbar-collapse" data-toggle="collapse" type="button" class="navbar-toggle"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="index.html" class="navbar-brand">
+          <h1><img alt="logo" src="images/logo.png" class="img-responsive"/></h1></a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{$baseurl}#home">Home</a></li>
+          <li><a href="{$baseurl}#aboutus">About Us</a></li>
+          <li><a href="{$baseurl}#statistics">Statistics</a></li>
+          <li><a href="{$baseurl}#toppers">Toppers</a></li>
+          <li><a href="{$baseurl}blogs">Blog</a></li>
+          <li><a href="{$baseurl}#joinus">Join Us</a></li>
+          <li><a data-toggle="modal" data-target="#svcsignin" class="btn btn-success">Sign in</a></li>
+          <div id="svcsignin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" class="modal fade">
+            <div role="document" class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true">×</span></button>
+                  <h4 id="myModalLabel" class="modal-title">Sign in</h4>
+                </div>
+                <div class="modal-body">
+                  <div class="row">
+                    <div class="col-md-8">{login}
+                      <div class="form navbar-form navbar-left">
+                        <div style="width:100%" class="form-group">
+                          <label class="control-label">User Name</label>
+                          <div class="atk-form-row">
+                            <div class="atk-cell atk-expand">{$email}</div>
+                          </div>
+                        </div>
+                        <div style="width:100%" class="form-group">
+                          <label class="control-label">Password</label>{$password}
+                        </div>
+                        <div style="width:100%;margin-top:10px;" class="form-group">{$FormButtons}</div>
+                      </div>{/login}
+                    </div>
+                    <div class="col-md-4 text-center">
+                      <p>Sign in with</p>
+                      <div class="btn btn-block btn-info">Facebook</div>or
+                      <div class="btn btn-block btn-danger">Google</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</header>{nofound}
+<section id="notfound">
+  <div class="row">
+    <div data-wow-duration="1200ms" data-wow-delay="300ms" class="heading text-center col-sm-8 col-sm-offset-2 wow fadeInUp">
+      <h2 class="atk-effect-danger">Blog Post Not Found</h2>
+      <p>Something wrong</p>
+    </div>
+  </div>
+</section>{/nofound}
+{blogpost}
+<section id="blogpost">
+  <div class="container">
+    <div class="row">
+      <div data-wow-duration="1200ms" data-wow-delay="300ms" class="heading col-sm-8 col-sm-offset-2 wow fadeInUp">
+        <h2>{subject}Blog Posts{/subject} </h2>
+        <h4>by <a href="#">{user}author{/user}</a></h4><span class="date">{created_at}June 26, 2014{/created_at}<span class="cetagory">&nbsp;in <strong>{category}General{/category}</strong></span></span><hr/>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ut enim ad minim veniam</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /#blog-->{/blogpost}
+<footer id="footer">
+  <div data-wow-duration="1000ms" data-wow-delay="300ms" class="footer-top wow fadeInUp">
+    <div class="container text-center">
+      <div class="footer-logo"><a href="index.html"><img src="images/footer-logo.png" alt="SVC" style="color:white;" class="img-responsive"/></a></div>
+      <div class="social-icons">
+        <ul>
+          <li><a href="#" class="envelope"><i class="fa fa-envelope"></i></a></li>
+          <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#" class="dribbble"><i class="fa fa-dribbble"></i></a></li>
+          <li><a href="#" class="facebook"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="#" class="tumblr"><i class="fa fa-tumblr-square"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <p>© 2015 Student Virtual Corporate.</p>
+        </div>
+        <div class="col-sm-6">
+          <p class="pull-right"> <a href="http://www.studentscorporate.com/"></a></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
