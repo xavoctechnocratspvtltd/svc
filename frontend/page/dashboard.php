@@ -6,8 +6,8 @@ class page_dashboard extends Page{
 		parent::init();
 
 		$this->api->title = "Dashboard";
-
-		// $this->add('View_Info')->set('Hello');
+		$this->setModel($this->api->auth->model);
+	
 	}
 
 	function defaultTemplate(){

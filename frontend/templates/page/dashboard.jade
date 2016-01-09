@@ -1,7 +1,7 @@
 section.content-header
   h1
     | Dashboard
-    small Control panel
+    small Your personal
   ol.breadcrumb
     li
       a(href='#')
@@ -14,8 +14,8 @@ section.content
       // small box
       .small-box.bg-aqua
         .inner
-          h3 150
-          p New Orders
+          h3 {gMarks}150{/gMarks}
+          p gMarks
         .icon
           i.ion.ion-bag
         a.small-box-footer(href='#')
@@ -26,9 +26,9 @@ section.content
       .small-box.bg-green
         .inner
           h3
-            | 53
+            | {growthRate}53{/growthRate}
             sup(style='font-size: 20px') %
-          p Bounce Rate
+          p Growth Rate
         .icon
           i.ion.ion-stats-bars
         a.small-box-footer(href='#')
@@ -39,8 +39,8 @@ section.content
       // small box
       .small-box.bg-yellow
         .inner
-          h3 44
-          p User Registrations
+          h3 {bestDepartmentgMarks}44{/bestDepartmentgMarks}
+          p Outperformed Department
         .icon
           i.ion.ion-person-add
         a.small-box-footer(href='#')
@@ -51,8 +51,8 @@ section.content
       // small box
       .small-box.bg-red
         .inner
-          h3 65
-          p Unique Visitors
+          h3 {interstDepartmentgMarks}65{/interstDepartmentgMarks}
+          p Interest Department
         .icon
           i.ion.ion-pie-graph
         a.small-box-footer(href='#')
@@ -276,7 +276,7 @@ section.content
       .box.box-solid.bg-teal-gradient
         .box-header
           i.fa.fa-th
-          h3.box-title Sales Graph
+          h3.box-title Performance Graph
           .box-tools.pull-right
             button.btn.bg-teal.btn-sm(data-widget='collapse')
               i.fa.fa-minus
@@ -289,15 +289,15 @@ section.content
           .row
             .col-xs-4.text-center(style='border-right: 1px solid #f4f4f4')
               input.knob(type='text', data-readonly='true', value='20', data-width='60', data-height='60', data-fgcolor='#39CCCC')
-              .knob-label Mail-Orders
+              .knob-label Dept-X away from next Grade
             // ./col
             .col-xs-4.text-center(style='border-right: 1px solid #f4f4f4')
               input.knob(type='text', data-readonly='true', value='50', data-width='60', data-height='60', data-fgcolor='#39CCCC')
-              .knob-label Online
+              .knob-label Category-X away from next Grade
             // ./col
             .col-xs-4.text-center
-              input.knob(type='text', data-readonly='true', value='30', data-width='60', data-height='60', data-fgcolor='#39CCCC')
-              .knob-label In-Store
+              input.knob(type='text', data-readonly='true', value='30', data-width='60', data-height='60', data-fgcolor='#ff0000')
+              .knob-label Covering in worst Dept
             // ./col
           // /.row
         // /.box-footer
