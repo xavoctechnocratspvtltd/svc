@@ -1,0 +1,40 @@
+div(id="{$_name}" class=" {$class} " style="{$style}")
+  .box.box-primary
+    .box-header
+      i(class="{title_icon}ion ion-clipboard{/}")
+      h3.box-title {title}To Do List{/}
+      .box-tools.pull-right
+        {paginator}
+        ul.pagination.pagination-sm.inline
+          li
+            a(href='#') «
+          li
+            a(href='#') 1
+        {/paginator}
+    // /.box-header
+    .box-body
+      ul.todo-list
+        {rows}{row}
+        li(data-id="{$id}")
+          // drag handle
+          span.handle
+            i.fa.fa-ellipsis-v
+            i.fa.fa-ellipsis-v
+          // checkbox
+          input(type='checkbox', value='', name='')
+          // todo text
+          span.text {$name}
+          // Emphasis label
+          small.label.label-danger
+            i.fa.fa-clock-o
+            |  2 mins
+          // General tools such as edit or delete
+          .tools
+            i.fa.fa-edit.todo-edit
+            i.fa.fa-trash-o.todo-delete
+         {/row}{/rows}
+    // /.box-body
+    .box-footer.clearfix.no-border
+      button.btn.btn-default.pull-right
+        i.fa.fa-plus
+        |  Add item
