@@ -205,7 +205,7 @@ link(rel='stylesheet', href='css/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml
                   .pull-left
                     a.btn.btn-default.btn-flat(href='profile') Profile
                   .pull-right
-                    a.btn.btn-default.btn-flat(href='#') Sign out
+                    a.btn.btn-default.btn-flat(href='logout') Sign out
             // Control Sidebar Toggle Button
             li
               a(href='#', data-toggle='control-sidebar')
@@ -219,7 +219,7 @@ link(rel='stylesheet', href='css/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml
           .pull-left.image
             img.img-circle(src='images/logo.png', alt='User Image')
           .pull-left.info
-            p Alexander Pierce
+            p {$name}
             a(href='#')
               i.fa.fa-circle.text-success
               |  Online
@@ -470,7 +470,7 @@ link(rel='stylesheet', href='css/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml
         |  1.0.0
       strong
         | Copyright © 2016-2017
-        a(href='http://svc.com') SVC
+        a(href='http://studentscorporate.com') SVC
         | .
       |  All rights reserved.
     // Control Sidebar
