@@ -15,7 +15,7 @@ class Model_Rule extends SQL_Model {
 
 		$this->addField('gMarksOptions')->type('text');
 
-		// $this->containsOne('gMarksOptions1',function($m){
+		$this->containsOne('gMarksOptions1',function($m){
 			$m->addField('name')->caption('status');
 			$m->addField('gMarks');
 			$m->addField('is_final')->type('boolean')->defaultValue(false);
