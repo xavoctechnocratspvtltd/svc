@@ -24,7 +24,7 @@ link(rel='stylesheet', href='css/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml
         // logo for regular state and mobile devices
         span.logo-lg
           b SVC
-          | &gMarks
+          | &amp; gMarks
       // Header Navbar: style can be found in header.less
       nav.navbar.navbar-static-top(role='navigation')
         // Sidebar toggle button
@@ -184,26 +184,26 @@ link(rel='stylesheet', href='css/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml
             li.dropdown.user.user-menu
               a.dropdown-toggle(href='#', data-toggle='dropdown')
                 img.user-image(src='images/logo.png', alt='User Image')
-                span.hidden-xs Rk Sinha
+                span.hidden-xs {$name}
               ul.dropdown-menu
                 // User image
                 li.user-header
                   img.img-circle(src='images/logo.png', alt='User Image')
                   p
-                    | Rakesh Sinha - Web Developer
-                    small Member since Nov. 2013
+                    | {$name} - Web Developer
+                    small Member since {member_since}Jan. 2016{/member_since}
                 // Menu Body
                 li.user-body
                   .col-xs-4.text-center
-                    a(href='#') Followers
+                    a(href='#') Marksheet
                   .col-xs-4.text-center
-                    a(href='#') Sales
+                    a(href='#') History
                   .col-xs-4.text-center
-                    a(href='#') Friends
+                    a(href='#') Analytics
                 // Menu Footer
                 li.user-footer
                   .pull-left
-                    a.btn.btn-default.btn-flat(href='#') Profile
+                    a.btn.btn-default.btn-flat(href='profile') Profile
                   .pull-right
                     a.btn.btn-default.btn-flat(href='#') Sign out
             // Control Sidebar Toggle Button

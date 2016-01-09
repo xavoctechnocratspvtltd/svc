@@ -34,7 +34,9 @@ class Frontend extends ApiFrontend {
         if(!$auth->isLoggedIn())
             $this->add('Layout_Empty');
         else{
-            $this->add('Layout_User');
+            $this->add('Layout_User')
+                ->setModel($this->api->auth->model);
+                
             // $user_menu = $this->layout->add('Menu',null,'UserMenu');
             // $user_menu->addMenuItem('dashboard','Home');
             // $user_menu->addMenuItem('dashboard','Profile');

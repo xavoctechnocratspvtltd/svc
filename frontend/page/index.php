@@ -35,7 +35,7 @@ class page_index extends Page{
 
         $form->onSubmit(function($f){
             if(!$this->app->auth->verifyCredentials($f['email'],$f['password']))
-                $f->displayError('email','Nope');
+                return $f->displayError('email','Wrong');
             $this->api->auth->login($f['email']);
             return $f->js()->univ()->location('dashboard');
         });
