@@ -21,6 +21,10 @@ class View_Lister_Todo extends \CompleteLister{
 
 		$this->js('click',$this->js()->univ()->frameURL('Edit Todo',[$vp_edit->getURL(),'row_id'=>$this->js()->_selectorThis()->closest('li')->attr('data-id')]))->_selector('.todo-edit');
 		// $this->js()->univ()->alert($this->js()->_selectorThis()->closest('li')->attr('data-id'))
+		$this->on('click','.svc-todo-add',function($js,$data){
+			return $js->univ()->frameURL('Add Rule',$this->api->url('addrule'));
+		});
+
 	}
 
 	function setModel($model,$fields=null){

@@ -6,7 +6,6 @@ class Model_Rule extends SQL_Model {
 	function init(){
 		parent::init();
 
-		$this->hasOne('RuleBook');
 		$this->hasOne('Industry');
 		$this->hasOne('Company');
 		$this->hasOne('Department');
@@ -14,6 +13,8 @@ class Model_Rule extends SQL_Model {
 
 		$this->addField('type')->enum(['routine','activity rule','task rule']);
 		$this->addField('name');
+
+		$this->addField('is_template')->type('boolean')->defaultValue(false);
 
 		$this->addField('applicable_on')->type('text');
 
@@ -23,15 +24,15 @@ class Model_Rule extends SQL_Model {
 
 		$this->addField('moderated_by')->enum(['SVC Admin','Company Owner','Manager','Self','None']);
 		
-		$this->addField('is_mandatory');
+		$this->addField('is_mandatory')->type('boolean');
 		$this->addField('applicable')->enum(['daily','weekly']);
 		$this->addField('is_self_addable')->type('boolean');
 
 		$this->addField('cross_check')->type('Number');
-		$this->containsMany('cross_check_options',function($m){
-			$m->addField('name');
-			$m->addField('gMarks')->type('text');
-		});
+		// $this->containsMany('cross_check_options',function($m){
+		// 	$m->addField('name');
+		// 	$m->addField('gMarks')->type('text');
+		// });
 
 		$this->hasMany('RuleOption');
 		$this->hasMany('gMarks');

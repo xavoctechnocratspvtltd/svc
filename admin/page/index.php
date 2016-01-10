@@ -15,11 +15,12 @@ class page_index extends Page {
         $tabs->addTab('Categories')->add('CRUD')->setModel('Category');
         $tabs->addTab('Users')->add('CRUD')->setModel('User');
         $tabs->addTab('gMarks')->add('CRUD')->setModel('gMarks');
+        $tabs->addTab('Rule')->add('CRUD')->setModel('Rule');
 
         $c= $tab_rulebook->add('CRUD');
         $c->setModel('RuleBook');
-        $c->addRef('RuleBookOption');
-        $c->addRef('RuleBookCrossCheckOption');
+        // $c->addRef('RuleOption');
+        // $c->addRef('RuleCrossCheckOption');
 
 
     }
