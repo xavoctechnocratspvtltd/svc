@@ -1,12 +1,11 @@
 <?php
 
-class Model_Rule extends SQL_Model {
-	public $table = 'rule';
+class Model_RuleBook extends SQL_Model {
+	public $table = 'rulebook';
 
 	function init(){
 		parent::init();
 
-		$this->hasOne('RuleBook');
 		$this->hasOne('Industry');
 		$this->hasOne('Company');
 		$this->hasOne('Department');
@@ -28,13 +27,16 @@ class Model_Rule extends SQL_Model {
 		$this->addField('is_self_addable')->type('boolean');
 
 		$this->addField('cross_check')->type('Number');
-		$this->containsMany('cross_check_options',function($m){
-			$m->addField('name');
-			$m->addField('gMarks')->type('text');
-		});
+		// $this->containsOne('cross_check_data',function($m){
+		// 	$m->containsMany('options',function($m){
+		// 		$m->addField('name');
+		// 		$m->addField('gMarks')->type('text');
+		// 	});
+		// });
 
-		$this->hasMany('RuleOption');
-		$this->hasMany('gMarks');
+		$this->hasMany('RuleBookOption');
+		$this->hasMany('RuleBookCrossCheckOption');
+		$this->hasMany('Rule');
 
 		$this->add('dynamic_model/Controller_AutoCreator',['engine'=>'INNODB']);
 	}

@@ -9,25 +9,17 @@ class page_index extends Page {
 
         $tabs = $this->add('Tabs');
 
-        $ct = $tabs->addTab('Rules');
+        $tab_rulebook = $tabs->addTab('RuleBook');
         $tabs->addTab('Industries')->add('CRUD')->setModel('Industry');
         $tabs->addTab('Departments')->add('CRUD')->setModel('Department');
         $tabs->addTab('Categories')->add('CRUD')->setModel('Category');
-        $c= $ct->add('CRUD');
-        $m=$c->setModel('Rule');
-
-        $p=$c->addFrame('set_options');
-        if($p){
-            
-            $p->add('View');
-
-            $f=$p->add('CRUD');
-            $f->setModel($this->add('Model_Rule')->load($c->id)->ref('gMarksOptions'));
-        }
-
         $tabs->addTab('Users')->add('CRUD')->setModel('User');
         $tabs->addTab('gMarks')->add('CRUD')->setModel('gMarks');
 
+        $c= $tab_rulebook->add('CRUD');
+        $c->setModel('RuleBook');
+        $c->addRef('RuleBookOption');
+        $c->addRef('RuleBookCrossCheckOption');
 
 
     }
